@@ -1,0 +1,2733 @@
+Gizmo {
+ addUserKnob {20 User}
+ addUserKnob {26 label_method l "" -STARTLINE T Method:}
+ addUserKnob {22 Distort T "a = nuke.thisNode()\na\['preferences_label_und_dis'].setValue(1)\na\['disable_1'].setValue(0)" +STARTLINE}
+ addUserKnob {22 Undistort -STARTLINE T "a = nuke.thisNode()\na\['preferences_label_und_dis'].setValue(0)\na\['disable_1'].setValue(0)"}
+ addUserKnob {7 preferences_label_und_dis l INVISIBLE +INVISIBLE}
+ preferences_label_und_dis 1
+ addUserKnob {22 label_turn_off l "Turn off" -STARTLINE T "a = nuke.thisNode()\na\['disable_1'].setValue(1)"}
+ addUserKnob {41 disable_1 l INVISIBLE -STARTLINE +INVISIBLE T STMap.disable}
+ addUserKnob {26 ""}
+ addUserKnob {26 label_focal_length l "" -STARTLINE T "Focal Length:"}
+ addUserKnob {22 label_28mm l 28mm T "a = nuke.thisNode()\na\['preferences_label_lenseswitch'].setValue(0)" +STARTLINE}
+ addUserKnob {22 label_35mm l 35mm -STARTLINE T "a = nuke.thisNode()\na\['preferences_label_lenseswitch'].setValue(1)"}
+ addUserKnob {22 label_45mm l 45mm -STARTLINE T "a = nuke.thisNode()\na\['preferences_label_lenseswitch'].setValue(2)"}
+ addUserKnob {22 label_55mm l 55mm -STARTLINE T "a = nuke.thisNode()\na\['preferences_label_lenseswitch'].setValue(3)"}
+ addUserKnob {22 label_65mm l 65mm -STARTLINE T "a = nuke.thisNode()\na\['preferences_label_lenseswitch'].setValue(4)"}
+ addUserKnob {22 label_80mm l 80mm -STARTLINE T "a = nuke.thisNode()\na\['preferences_label_lenseswitch'].setValue(5)"}
+ addUserKnob {22 label_110mm l 110mm -STARTLINE T "a = nuke.thisNode()\na\['preferences_label_lenseswitch'].setValue(6)"}
+ addUserKnob {7 preferences_label_lenseswitch l INVISIBLE +INVISIBLE R 0 6}
+ preferences_label_lenseswitch 2
+ addUserKnob {26 ""}
+ addUserKnob {26 label_focus l "" +STARTLINE T "Focus (meter):"}
+ addUserKnob {7 preferences_label_focus l " " -STARTLINE R 1 100}
+ preferences_label_focus 12
+ addUserKnob {26 ""}
+ addUserKnob {20 label_other l "Extra settings" n 1}
+ addUserKnob {41 useGPUIfAvailable l "Use GPU if available" T VectorBlur.useGPUIfAvailable}
+ addUserKnob {26 label_Chr_Aber l "" +STARTLINE T "Chromatic Aberration Level:"}
+ addUserKnob {7 preferences_label_chr_aber l " " -STARTLINE}
+ preferences_label_chr_aber 0.7
+ addUserKnob {41 disable_4 l disable -STARTLINE T Level_ChrAber.disable}
+ addUserKnob {26 label_vignette l "" +STARTLINE T Vignette:}
+ addUserKnob {41 amount l "" -STARTLINE T Vignette.amount}
+ addUserKnob {41 disable_3 l disable -STARTLINE T Vignette.disable}
+ addUserKnob {26 label_blur l "" +STARTLINE T "Edge's blur:"}
+ addUserKnob {41 scale l "" -STARTLINE T VectorBlur.scale}
+ addUserKnob {41 disable_2 l disable -STARTLINE T VectorBlur.disable}
+ addUserKnob {26 label_blurmask l "" +STARTLINE T "Mask's Transform for Edge's blur:"}
+ addUserKnob {41 scale_1 l "" -STARTLINE T TransformMask.scale}
+ addUserKnob {6 preferences_label_disable l "Disable All" +STARTLINE}
+ addUserKnob {20 endGroup n -1}
+ addUserKnob {26 ""}
+ addUserKnob {26 label_slava_sexton l "" +STARTLINE T "LensDistortion of the Anamorphic Lenses:\nHAWK 28mm, 35mm, 45mm, 55mm, 65mm, 80mm, 110mm.\nby Camera: ARRI ALEXA\nAnamorphic Mode 4:3 2.8K 2880*2160\n23.76x18.82mm / 0.935x0.702\", Ø: 29.70/1.428\"\n\nThe Script: v08 © Slava Sexton"}
+}
+ BackdropNode {
+  inputs 0
+  name BackdropNode14
+  tile_color 0x388e8e00
+  note_font_size 42
+  xpos -1455
+  ypos -1189
+  bdwidth 3106
+  bdheight 1324
+  z_order -2
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode15
+  tile_color 0x71c67100
+  label 55mm
+  note_font_size 42
+  xpos 195
+  ypos -495
+  bdwidth 355
+  bdheight 294
+  z_order -1
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode18
+  tile_color 0x71c67100
+  label 65mm
+  note_font_size 42
+  xpos 559
+  ypos -495
+  bdwidth 355
+  bdheight 294
+  z_order -1
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode2
+  tile_color 0x71c67100
+  label 45mm
+  note_font_size 42
+  xpos -169
+  ypos -495
+  bdwidth 355
+  bdheight 294
+  z_order -1
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode21
+  tile_color 0x71c67100
+  label 80mm
+  note_font_size 42
+  xpos 924
+  ypos -495
+  bdwidth 355
+  bdheight 294
+  z_order -1
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode24
+  tile_color 0x71c67100
+  label 110mm
+  note_font_size 42
+  xpos 1288
+  ypos -495
+  bdwidth 355
+  bdheight 294
+  z_order -1
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode6
+  tile_color 0x71c67100
+  label 35mm
+  note_font_size 42
+  xpos -534
+  ypos -495
+  bdwidth 355
+  bdheight 294
+  z_order -1
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode8
+  tile_color 0x71c67100
+  label 28mm
+  note_font_size 42
+  xpos -900
+  ypos -495
+  bdwidth 355
+  bdheight 294
+  z_order -1
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode1
+  tile_color 0x7171c600
+  label Distort
+  note_font_size 32
+  xpos -345
+  ypos -414
+  bdwidth 156
+  bdheight 144
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode10
+  tile_color 0x7171c600
+  label Undistort
+  note_font_size 32
+  xpos -890
+  ypos -415
+  bdwidth 154
+  bdheight 144
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode11
+  tile_color 0x3caa52ff
+  label "Constant\nChr.Aber."
+  note_font_size 24
+  xpos -1114
+  ypos -1009
+  bdwidth 218
+  bdheight 203
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode12
+  tile_color 0x8e388e00
+  label 35mm
+  note_font_size 42
+  xpos -884
+  ypos -792
+  bdheight 110
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode13
+  tile_color 0x8e388e00
+  label 28mm
+  note_font_size 42
+  xpos -1111
+  ypos -787
+  bdheight 110
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode16
+  tile_color 0x7171c600
+  label Undistort
+  note_font_size 32
+  xpos 205
+  ypos -415
+  bdwidth 154
+  bdheight 144
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode17
+  tile_color 0x7171c600
+  label Distort
+  note_font_size 32
+  xpos 384
+  ypos -414
+  bdwidth 156
+  bdheight 144
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode19
+  tile_color 0x7171c600
+  label Undistort
+  note_font_size 32
+  xpos 569
+  ypos -415
+  bdwidth 154
+  bdheight 144
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode20
+  tile_color 0x7171c600
+  label Distort
+  note_font_size 32
+  xpos 748
+  ypos -414
+  bdwidth 156
+  bdheight 144
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode22
+  tile_color 0x7171c600
+  label Undistort
+  note_font_size 32
+  xpos 934
+  ypos -415
+  bdwidth 154
+  bdheight 144
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode23
+  tile_color 0x7171c600
+  label Distort
+  note_font_size 32
+  xpos 1113
+  ypos -414
+  bdwidth 156
+  bdheight 144
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode25
+  tile_color 0x7171c600
+  label Undistort
+  note_font_size 32
+  xpos 1298
+  ypos -415
+  bdwidth 154
+  bdheight 144
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode26
+  tile_color 0x7171c600
+  label Distort
+  note_font_size 32
+  xpos 1477
+  ypos -414
+  bdwidth 156
+  bdheight 144
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode27
+  tile_color 0x8e388e00
+  label 55mm
+  note_font_size 42
+  xpos -433
+  ypos -791
+  bdheight 110
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode28
+  tile_color 0x3caa52ff
+  label "Constant\nChr.Aber."
+  note_font_size 24
+  xpos -435
+  ypos -1007
+  bdwidth 218
+  bdheight 203
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode29
+  tile_color 0x8e388e00
+  label 45mm
+  note_font_size 42
+  xpos -657
+  ypos -793
+  bdheight 110
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode3
+  tile_color 0x3caa52ff
+  label "Constant\nChr.Aber."
+  note_font_size 24
+  xpos -886
+  ypos -1008
+  bdwidth 218
+  bdheight 203
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode30
+  tile_color 0x3caa52ff
+  label "Constant\nChr.Aber."
+  note_font_size 24
+  xpos -659
+  ypos -1009
+  bdwidth 218
+  bdheight 203
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode31
+  tile_color 0x8e388e00
+  label 65mm
+  note_font_size 42
+  xpos -207
+  ypos -791
+  bdheight 110
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode32
+  tile_color 0x3caa52ff
+  label "Constant\nChr.Aber."
+  note_font_size 24
+  xpos -209
+  ypos -1007
+  bdwidth 218
+  bdheight 203
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode33
+  tile_color 0x8e388e00
+  label 80mm
+  note_font_size 42
+  xpos 24
+  ypos -789
+  bdheight 110
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode34
+  tile_color 0x3caa52ff
+  label "Constant\nChr.Aber."
+  note_font_size 24
+  xpos 22
+  ypos -1005
+  bdwidth 218
+  bdheight 203
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode35
+  tile_color 0x8e388e00
+  label 110mm
+  note_font_size 42
+  xpos 258
+  ypos -788
+  bdheight 110
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode36
+  tile_color 0x3caa52ff
+  label "Constant\nChr.Aber."
+  note_font_size 24
+  xpos 256
+  ypos -1004
+  bdwidth 218
+  bdheight 203
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode4
+  tile_color 0x7171c600
+  label Undistort
+  note_font_size 32
+  xpos -524
+  ypos -415
+  bdwidth 154
+  bdheight 144
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode5
+  tile_color 0x7171c600
+  label Undistort
+  note_font_size 32
+  xpos -159
+  ypos -415
+  bdwidth 154
+  bdheight 144
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode7
+  tile_color 0x7171c600
+  label Distort
+  note_font_size 32
+  xpos 20
+  ypos -414
+  bdwidth 156
+  bdheight 144
+ }
+ BackdropNode {
+  inputs 0
+  name BackdropNode9
+  tile_color 0x7171c600
+  label Distort
+  note_font_size 32
+  xpos -711
+  ypos -414
+  bdwidth 156
+  bdheight 144
+ }
+ Crop {
+  inputs 0
+  box {0 0 {input.format.w} {input.format.h}}
+  reformat true
+  crop false
+  name Crop1
+  xpos -1345
+  ypos -217
+  hide_input true
+ }
+set Ne0d41000 [stack 0]
+ Radial {
+  output alpha
+  cliptype bbox
+  replace true
+  area {0 0 {input.format.w} {input.format.h}}
+  softness 0
+  name Radial2
+  xpos -1442
+  ypos -180
+ }
+ Transform {
+  scale {0.8 0.8}
+  center {{parent.Radial2.area.r/2} {parent.Radial2.area.t/2}}
+  name TransformMask
+  xpos -1442
+  ypos -142
+ }
+ Blur {
+  channels alpha
+  size 300
+  crop false
+  name Blur1
+  xpos -1442
+  ypos -115
+ }
+set Ne0d41c00 [stack 0]
+ Dilate {
+  channels alpha
+  size {-150 -30}
+  name Dilate1
+  xpos -1442
+  ypos -77
+ }
+ Dot {
+  name Dot37
+  xpos -1414
+  ypos -41
+ }
+ Grade {
+  channels alpha
+  white 1.05
+  name Grade1
+  xpos -1339
+  ypos -45
+ }
+push $Ne0d41c00
+ Camera2 {
+  inputs 0
+  rotate {0 0 {curve x1 1 0 -1}}
+  name Camera1
+  xpos -1336
+  ypos -183
+  hide_input true
+ }
+ Card2 {
+  inputs 0
+  translate {0 0 -1}
+  control_points {3 3 3 6 
+
+1 {-0.5 -0.5 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {0 0 0} 
+1 {0 -0.5 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {0.5 0 0} 
+1 {0.5 -0.5 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0.1666666865 0} 0 {0 0 0} 0 {1 0 0} 
+1 {-0.5 0 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {0 0.5 0} 
+1 {0 0 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {0.5 0.5 0} 
+1 {0.5 0 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0.1666666716 0} 0 {0 -0.1666666716 0} 0 {1 0.5 0} 
+1 {-0.5 0.5 0} 0 {0.1666666865 0 0} 0 {0 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {0 1 0} 
+1 {0 0.5 0} 0 {0.1666666716 0 0} 0 {-0.1666666716 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {0.5 1 0} 
+1 {0.5 0.5 0} 0 {0 0 0} 0 {-0.1666666865 0 0} 0 {0 0 0} 0 {0 -0.1666666865 0} 0 {1 1 0} }
+  name Card1
+  xpos -1246
+  ypos -189
+  hide_input true
+ }
+push $Ne0d41000
+ ScanlineRender {
+  inputs 3
+  conservative_shader_sampling false
+  motion_vectors_type distance
+  name ScanlineRender1
+  xpos -1246
+  ypos -163
+ }
+ Grade {
+  inputs 1+1
+  channels all
+  white 0
+  name Grade34
+  xpos -1246
+  ypos -115
+ }
+ FrameHold {
+  firstFrame 2
+  name FrameHold1
+  xpos -1246
+  ypos -77
+ }
+ Input {
+  inputs 0
+  name Input1
+  xpos -1102
+  ypos -1105
+ }
+ Dot {
+  name Dot7
+  xpos -1074
+  ypos -1054
+ }
+set Nd69f4000 [stack 0]
+ Dot {
+  name Dot35
+  xpos 296
+  ypos -926
+ }
+set Nd69f4400 [stack 0]
+ Dot {
+  name Dot36
+  xpos 406
+  ypos -926
+ }
+set Nd69f4800 [stack 0]
+ Transform {
+  scale {0.9995 1}
+  center {{parent.RED6.center} {parent.RED6.center}}
+  name BLUE6
+  xpos 378
+  ypos -835
+ }
+push $Nd69f4800
+ Transform {
+  center {{parent.RED6.center} {parent.RED6.center}}
+  name GREEN6
+  xpos 378
+  ypos -861
+ }
+push $Nd69f4800
+ Transform {
+  scale {1.0002 1}
+  center {{format.w/2} {format.h/2}}
+  name RED6
+  xpos 378
+  ypos -887
+ }
+push $Nd69f4400
+ ShuffleCopy {
+  inputs 2
+  red red
+  name ShuffleCopy20
+  xpos 268
+  ypos -887
+ }
+ ShuffleCopy {
+  inputs 2
+  green green
+  name ShuffleCopy21
+  xpos 268
+  ypos -861
+ }
+ ShuffleCopy {
+  inputs 2
+  blue blue
+  name ShuffleCopy22
+  xpos 268
+  ypos -835
+ }
+ Group {
+  name Chromatic_Aberration_5
+  xpos 268
+  ypos -708
+  addUserKnob {20 ChromaticAberration l Chromatic_Aberration}
+  addUserKnob {26 Chromatic_Aberration}
+  addUserKnob {41 Red T Red_Aberration.distortion1}
+  addUserKnob {41 Green T Green_Aberration.distortion1}
+  addUserKnob {41 Blue T Blue_Aberration.distortion1}
+  addUserKnob {41 invertDistortion l Remove T Red_Aberration.invertDistortion}
+ }
+  Input {
+   inputs 0
+   name Src
+   xpos -428
+   ypos -246
+  }
+  Remove {
+   channels alpha
+   name Remove2
+   xpos -428
+   ypos -171
+  }
+set N1bb5e800 [stack 0]
+  Remove {
+   channels {rgba.red rgba.green -rgba.blue none}
+   name Blue
+   xpos -282
+   ypos -110
+  }
+  Shuffle {
+   black blue
+   out2 alpha
+   name Blue_Alpha
+   xpos -282
+   ypos -6
+  }
+  LensDistortion1_0 {
+   serializeKnob ""
+   serialiseKnob "22 serialization::archive 19 0 0 0 0 0 0 0 0 0 0 0 0"
+   distortion1 0.0024
+   distortion2 {{parent.Red_Aberration.distortion2.main}}
+   invertDistortion {{parent.Red_Aberration.invertDistortion.main}}
+   cardScale {1.001275301 1.001275301 1}
+   a 0.002058898564
+   b -0.002417622833
+   c -0.001429431722
+   name Blue_Aberration
+   selected true
+   xpos -282
+   ypos 121
+  }
+push $N1bb5e800
+  Remove {
+   channels {rgba.red -rgba.green rgba.blue none}
+   name Green
+   xpos -428
+   ypos -110
+  }
+  Shuffle {
+   black green
+   out2 alpha
+   name Green_Alpha
+   xpos -428
+   ypos -9
+  }
+  LensDistortion1_0 {
+   serializeKnob ""
+   serialiseKnob "22 serialization::archive 19 0 0 0 0 0 0 0 0 0 0 0 0"
+   distortion2 {{parent.Red_Aberration.distortion2.main}}
+   invertDistortion {{parent.Red_Aberration.invertDistortion.main}}
+   cardScale {0.9995008707 0.9995008707 1}
+   a 0.00110245496
+   b -0.0004297202686
+   c -0.0003745653376
+   name Green_Aberration
+   xpos -428
+   ypos 62
+  }
+push $N1bb5e800
+  Remove {
+   channels {-rgba.red rgba.green rgba.blue none}
+   name Red
+   xpos -563
+   ypos -110
+  }
+  Shuffle {
+   black red
+   out2 alpha
+   name Red_Alpha
+   xpos -567
+   ypos -9
+  }
+  LensDistortion1_0 {
+   serializeKnob ""
+   serialiseKnob "22 serialization::archive 19 0 0 0 0 0 0 0 0 0 0 0 0"
+   distortion1 -0.0009
+   distortion2 {{(distortion1.main)/0.8}}
+   "Card Parameters" 1
+   cardScale {0.9979875088 0.9979875088 1}
+   a 0.002634314355
+   b -0.0004319878062
+   c -0.0006490023807
+   name Red_Aberration
+   xpos -559
+   ypos 102
+  }
+  Merge2 {
+   inputs 2
+   operation screen
+   name Red_and_Green
+   xpos -501
+   ypos 183
+  }
+  Merge2 {
+   inputs 2
+   operation screen
+   name Red_and_Green_and_Blue
+   xpos -378
+   ypos 183
+  }
+  Remove {
+   channels alpha
+   name Remove1
+   xpos -379
+   ypos 250
+  }
+  Output {
+   name Out
+   xpos -379
+   ypos 335
+  }
+ end_group
+push $Nd69f4000
+ Dot {
+  name Dot33
+  xpos 62
+  ypos -927
+ }
+set N7f4b2000 [stack 0]
+ Dot {
+  name Dot34
+  xpos 172
+  ypos -927
+ }
+set N7f4b2400 [stack 0]
+ Transform {
+  scale {{0.999+parent.Focus.knob.first_frame*0.0000001} 1}
+  center {{parent.RED5.center} {parent.RED5.center}}
+  name BLUE5
+  xpos 144
+  ypos -836
+ }
+push $N7f4b2400
+ Transform {
+  center {{parent.RED5.center} {parent.RED5.center}}
+  name GREEN5
+  xpos 144
+  ypos -862
+ }
+push $N7f4b2400
+ Transform {
+  scale {{1.0004-parent.Focus.knob.first_frame*0.00000004} 1}
+  center {{format.w/2} {format.h/2}}
+  name RED5
+  xpos 144
+  ypos -888
+ }
+push $N7f4b2000
+ ShuffleCopy {
+  inputs 2
+  red red
+  name ShuffleCopy17
+  xpos 34
+  ypos -888
+ }
+ ShuffleCopy {
+  inputs 2
+  green green
+  name ShuffleCopy18
+  xpos 34
+  ypos -862
+ }
+ ShuffleCopy {
+  inputs 2
+  blue blue
+  name ShuffleCopy19
+  xpos 34
+  ypos -836
+ }
+ Group {
+  name Chromatic_Aberration_4
+  xpos 34
+  ypos -709
+  addUserKnob {20 ChromaticAberration l Chromatic_Aberration}
+  addUserKnob {26 Chromatic_Aberration}
+  addUserKnob {41 Red T Red_Aberration.distortion1}
+  addUserKnob {41 Green T Green_Aberration.distortion1}
+  addUserKnob {41 Blue T Blue_Aberration.distortion1}
+  addUserKnob {41 invertDistortion l Remove T Red_Aberration.invertDistortion}
+ }
+  Input {
+   inputs 0
+   name Src
+   xpos -428
+   ypos -246
+  }
+  Remove {
+   channels alpha
+   name Remove2
+   xpos -428
+   ypos -171
+  }
+set N44eca400 [stack 0]
+  Remove {
+   channels {rgba.red rgba.green -rgba.blue none}
+   name Blue
+   xpos -282
+   ypos -110
+  }
+  Shuffle {
+   black blue
+   out2 alpha
+   name Blue_Alpha
+   xpos -282
+   ypos -6
+  }
+  LensDistortion1_0 {
+   serializeKnob ""
+   serialiseKnob "22 serialization::archive 19 0 0 0 0 0 0 0 0 0 0 0 0"
+   distortion1 0.0024
+   distortion2 {{parent.Red_Aberration.distortion2.main}}
+   invertDistortion {{parent.Red_Aberration.invertDistortion.main}}
+   cardScale {1.001275301 1.001275301 1}
+   a 0.002058898564
+   b -0.002417622833
+   c -0.001429431722
+   name Blue_Aberration
+   selected true
+   xpos -282
+   ypos 121
+  }
+push $N44eca400
+  Remove {
+   channels {rgba.red -rgba.green rgba.blue none}
+   name Green
+   xpos -428
+   ypos -110
+  }
+  Shuffle {
+   black green
+   out2 alpha
+   name Green_Alpha
+   xpos -428
+   ypos -9
+  }
+  LensDistortion1_0 {
+   serializeKnob ""
+   serialiseKnob "22 serialization::archive 19 0 0 0 0 0 0 0 0 0 0 0 0"
+   distortion2 {{parent.Red_Aberration.distortion2.main}}
+   invertDistortion {{parent.Red_Aberration.invertDistortion.main}}
+   cardScale {0.9995008707 0.9995008707 1}
+   a 0.00110245496
+   b -0.0004297202686
+   c -0.0003745653376
+   name Green_Aberration
+   xpos -428
+   ypos 62
+  }
+push $N44eca400
+  Remove {
+   channels {-rgba.red rgba.green rgba.blue none}
+   name Red
+   xpos -563
+   ypos -110
+  }
+  Shuffle {
+   black red
+   out2 alpha
+   name Red_Alpha
+   xpos -567
+   ypos -9
+  }
+  LensDistortion1_0 {
+   serializeKnob ""
+   serialiseKnob "22 serialization::archive 19 0 0 0 0 0 0 0 0 0 0 0 0"
+   distortion1 -0.0009
+   distortion2 {{(distortion1.main)/0.8}}
+   "Card Parameters" 1
+   cardScale {0.9979875088 0.9979875088 1}
+   a 0.002634314355
+   b -0.0004319878062
+   c -0.0006490023807
+   name Red_Aberration
+   xpos -559
+   ypos 102
+  }
+  Merge2 {
+   inputs 2
+   operation screen
+   name Red_and_Green
+   xpos -501
+   ypos 183
+  }
+  Merge2 {
+   inputs 2
+   operation screen
+   name Red_and_Green_and_Blue
+   xpos -378
+   ypos 183
+  }
+  Remove {
+   channels alpha
+   name Remove1
+   xpos -379
+   ypos 250
+  }
+  Output {
+   name Out
+   xpos -379
+   ypos 335
+  }
+ end_group
+push $Nd69f4000
+ Dot {
+  name Dot31
+  xpos -169
+  ypos -929
+ }
+set N459a7c00 [stack 0]
+ Dot {
+  name Dot32
+  xpos -59
+  ypos -929
+ }
+set N4aa8000 [stack 0]
+ Transform {
+  scale {{0.9983+parent.Focus.knob.first_frame*0.00000004} 1}
+  center {{parent.RED4.center} {parent.RED4.center}}
+  name BLUE4
+  xpos -87
+  ypos -838
+ }
+push $N4aa8000
+ Transform {
+  center {{parent.RED4.center} {parent.RED4.center}}
+  name GREEN4
+  xpos -87
+  ypos -864
+ }
+push $N4aa8000
+ Transform {
+  scale {1.0004 1}
+  center {{format.w/2} {format.h/2}}
+  name RED4
+  xpos -87
+  ypos -890
+ }
+push $N459a7c00
+ ShuffleCopy {
+  inputs 2
+  red red
+  name ShuffleCopy14
+  xpos -197
+  ypos -890
+ }
+ ShuffleCopy {
+  inputs 2
+  green green
+  name ShuffleCopy15
+  xpos -197
+  ypos -864
+ }
+ ShuffleCopy {
+  inputs 2
+  blue blue
+  name ShuffleCopy16
+  xpos -197
+  ypos -838
+ }
+ Group {
+  name Chromatic_Aberration_3
+  xpos -197
+  ypos -711
+  addUserKnob {20 ChromaticAberration l Chromatic_Aberration}
+  addUserKnob {26 Chromatic_Aberration}
+  addUserKnob {41 Red T Red_Aberration.distortion1}
+  addUserKnob {41 Green T Green_Aberration.distortion1}
+  addUserKnob {41 Blue T Blue_Aberration.distortion1}
+  addUserKnob {41 invertDistortion l Remove T Red_Aberration.invertDistortion}
+ }
+  Input {
+   inputs 0
+   name Src
+   xpos -428
+   ypos -246
+  }
+  Remove {
+   channels alpha
+   name Remove2
+   xpos -428
+   ypos -171
+  }
+set N8d99a000 [stack 0]
+  Remove {
+   channels {rgba.red rgba.green -rgba.blue none}
+   name Blue
+   xpos -282
+   ypos -110
+  }
+  Shuffle {
+   black blue
+   out2 alpha
+   name Blue_Alpha
+   xpos -282
+   ypos -6
+  }
+  LensDistortion1_0 {
+   serializeKnob ""
+   serialiseKnob "22 serialization::archive 19 0 0 0 0 0 0 0 0 0 0 0 0"
+   distortion1 0.0025
+   distortion2 {{parent.Red_Aberration.distortion2.main}}
+   invertDistortion {{parent.Red_Aberration.invertDistortion.main}}
+   cardScale {1.001627445 1.001627445 1}
+   a 0.001524453517
+   b -0.00231356686
+   c -0.001263972139
+   name Blue_Aberration
+   selected true
+   xpos -282
+   ypos 121
+  }
+push $N8d99a000
+  Remove {
+   channels {rgba.red -rgba.green rgba.blue none}
+   name Green
+   xpos -428
+   ypos -110
+  }
+  Shuffle {
+   black green
+   out2 alpha
+   name Green_Alpha
+   xpos -428
+   ypos -9
+  }
+  LensDistortion1_0 {
+   serializeKnob ""
+   serialiseKnob "22 serialization::archive 19 0 0 0 0 0 0 0 0 0 0 0 0"
+   distortion2 {{parent.Red_Aberration.distortion2.main}}
+   invertDistortion {{parent.Red_Aberration.invertDistortion.main}}
+   cardScale {0.9995008707 0.9995008707 1}
+   a 0.00110245496
+   b -0.0004297202686
+   c -0.0003745653376
+   name Green_Aberration
+   xpos -428
+   ypos 62
+  }
+push $N8d99a000
+  Remove {
+   channels {-rgba.red rgba.green rgba.blue none}
+   name Red
+   xpos -563
+   ypos -110
+  }
+  Shuffle {
+   black red
+   out2 alpha
+   name Red_Alpha
+   xpos -567
+   ypos -9
+  }
+  LensDistortion1_0 {
+   serializeKnob ""
+   serialiseKnob "22 serialization::archive 19 0 0 0 0 0 0 0 0 0 0 0 0"
+   distortion1 -0.0007
+   distortion2 {{(distortion1.main)/0.8}}
+   "Card Parameters" 1
+   cardScale {0.9984326959 0.9984326959 1}
+   a 0.002091503236
+   b -0.0004360904859
+   c -0.0004228362232
+   name Red_Aberration
+   xpos -559
+   ypos 102
+  }
+  Merge2 {
+   inputs 2
+   operation screen
+   name Red_and_Green
+   xpos -501
+   ypos 183
+  }
+  Merge2 {
+   inputs 2
+   operation screen
+   name Red_and_Green_and_Blue
+   xpos -378
+   ypos 183
+  }
+  Remove {
+   channels alpha
+   name Remove1
+   xpos -379
+   ypos 250
+  }
+  Output {
+   name Out
+   xpos -379
+   ypos 335
+  }
+ end_group
+push $Nd69f4000
+ Dot {
+  name Dot28
+  xpos -395
+  ypos -929
+ }
+set Nd0219800 [stack 0]
+ Dot {
+  name Dot30
+  xpos -285
+  ypos -929
+ }
+set Nd0219c00 [stack 0]
+ Transform {
+  scale {0.9982 1}
+  center {{parent.RED3.center} {parent.RED3.center}}
+  name BLUE3
+  xpos -313
+  ypos -838
+ }
+push $Nd0219c00
+ Transform {
+  center {{parent.RED3.center} {parent.RED3.center}}
+  name GREEN3
+  xpos -313
+  ypos -864
+ }
+push $Nd0219c00
+ Transform {
+  scale {1.0008 1}
+  center {{format.w/2} {format.h/2}}
+  name RED3
+  xpos -313
+  ypos -890
+ }
+push $Nd0219800
+ ShuffleCopy {
+  inputs 2
+  red red
+  name ShuffleCopy5
+  xpos -423
+  ypos -890
+ }
+ ShuffleCopy {
+  inputs 2
+  green green
+  name ShuffleCopy9
+  xpos -423
+  ypos -864
+ }
+ ShuffleCopy {
+  inputs 2
+  blue blue
+  name ShuffleCopy10
+  xpos -423
+  ypos -838
+ }
+ Group {
+  name Chromatic_Aberration_1
+  xpos -423
+  ypos -711
+  addUserKnob {20 ChromaticAberration l Chromatic_Aberration}
+  addUserKnob {26 Chromatic_Aberration}
+  addUserKnob {41 Red T Red_Aberration.distortion1}
+  addUserKnob {41 Green T Green_Aberration.distortion1}
+  addUserKnob {41 Blue T Blue_Aberration.distortion1}
+  addUserKnob {41 invertDistortion l Remove T Red_Aberration.invertDistortion}
+ }
+  Input {
+   inputs 0
+   name Src
+   xpos -428
+   ypos -246
+  }
+  Remove {
+   channels alpha
+   name Remove2
+   xpos -428
+   ypos -171
+  }
+set N42fd3c00 [stack 0]
+  Remove {
+   channels {rgba.red rgba.green -rgba.blue none}
+   name Blue
+   xpos -282
+   ypos -110
+  }
+  Shuffle {
+   black blue
+   out2 alpha
+   name Blue_Alpha
+   xpos -282
+   ypos -6
+  }
+  LensDistortion1_0 {
+   serializeKnob ""
+   serialiseKnob "22 serialization::archive 19 0 0 0 0 0 0 0 0 0 0 0 0"
+   distortion1 {{0.0025+parent.parent.Focus.knob.first_frame/1000000*0.1}}
+   distortion2 {{parent.Red_Aberration.distortion2.main i}}
+   invertDistortion {{parent.Red_Aberration.invertDistortion.main i}}
+   cardScale {1.000009775 1.000009775 1}
+   a 0.00503473077
+   b -0.003641349729
+   c -0.002409124747
+   name Blue_Aberration
+   xpos -282
+   ypos 121
+  }
+push $N42fd3c00
+  Remove {
+   channels {rgba.red -rgba.green rgba.blue none}
+   name Green
+   xpos -428
+   ypos -110
+  }
+  Shuffle {
+   black green
+   out2 alpha
+   name Green_Alpha
+   xpos -428
+   ypos -9
+  }
+  LensDistortion1_0 {
+   serializeKnob ""
+   serialiseKnob "22 serialization::archive 19 0 0 0 0 0 0 0 0 0 0 0 0"
+   distortion2 {{parent.Red_Aberration.distortion2.main i}}
+   invertDistortion {{parent.Red_Aberration.invertDistortion.main i}}
+   cardScale {0.9987562895 0.9987562895 1}
+   a 0.002814945765
+   b -0.00115302857
+   c -0.0009359579999
+   name Green_Aberration
+   xpos -428
+   ypos 62
+  }
+push $N42fd3c00
+  Remove {
+   channels {-rgba.red rgba.green rgba.blue none}
+   name Red
+   xpos -563
+   ypos -110
+  }
+  Shuffle {
+   black red
+   out2 alpha
+   name Red_Alpha
+   xpos -567
+   ypos -9
+  }
+  LensDistortion1_0 {
+   serializeKnob ""
+   serialiseKnob "22 serialization::archive 19 0 0 0 0 0 0 0 0 0 0 0 0"
+   distortion1 {{-0.001-parent.parent.Focus.knob.first_frame*0.00000005}}
+   distortion2 {{(distortion1.main)/0.8 i}}
+   "Card Parameters" 1
+   cardScale {0.9966599941 0.9966599941 1}
+   a 0.00432461407
+   b -0.0007915272145
+   c -0.0008771854336
+   name Red_Aberration
+   xpos -559
+   ypos 102
+  }
+  Merge2 {
+   inputs 2
+   operation screen
+   name Red_and_Green
+   xpos -501
+   ypos 183
+  }
+  Merge2 {
+   inputs 2
+   operation screen
+   name Red_and_Green_and_Blue
+   xpos -378
+   ypos 183
+  }
+  Remove {
+   channels alpha
+   name Remove1
+   xpos -379
+   ypos 250
+  }
+  Output {
+   name Out
+   xpos -379
+   ypos 335
+  }
+ end_group
+push $Nd69f4000
+ Dot {
+  name Dot29
+  xpos -619
+  ypos -931
+ }
+set N1b393400 [stack 0]
+ Dot {
+  name Dot16
+  xpos -509
+  ypos -931
+ }
+set N1b393800 [stack 0]
+ Transform {
+  scale {0.9975 1}
+  center {{parent.RED2.center} {parent.RED2.center}}
+  name BLUE2
+  xpos -537
+  ypos -840
+ }
+push $N1b393800
+ Transform {
+  center {{parent.RED2.center} {parent.RED2.center}}
+  name GREEN2
+  xpos -537
+  ypos -866
+ }
+push $N1b393800
+ Transform {
+  scale {1.001 1}
+  center {{format.w/2} {format.h/2}}
+  name RED2
+  xpos -537
+  ypos -892
+ }
+push $N1b393400
+ ShuffleCopy {
+  inputs 2
+  red red
+  name ShuffleCopy11
+  xpos -647
+  ypos -892
+ }
+ ShuffleCopy {
+  inputs 2
+  green green
+  name ShuffleCopy12
+  xpos -647
+  ypos -866
+ }
+ ShuffleCopy {
+  inputs 2
+  blue blue
+  name ShuffleCopy13
+  xpos -647
+  ypos -840
+ }
+ Group {
+  name Chromatic_Aberration_2
+  xpos -647
+  ypos -713
+  addUserKnob {20 ChromaticAberration l Chromatic_Aberration}
+  addUserKnob {26 Chromatic_Aberration}
+  addUserKnob {41 Red T Red_Aberration.distortion1}
+  addUserKnob {41 Green T Green_Aberration.distortion1}
+  addUserKnob {41 Blue T Blue_Aberration.distortion1}
+  addUserKnob {41 invertDistortion l Remove T Red_Aberration.invertDistortion}
+ }
+  Input {
+   inputs 0
+   name Src
+   xpos -428
+   ypos -246
+  }
+  Remove {
+   channels alpha
+   name Remove2
+   xpos -428
+   ypos -171
+  }
+set Ne0657800 [stack 0]
+  Remove {
+   channels {rgba.red rgba.green -rgba.blue none}
+   name Blue
+   xpos -282
+   ypos -110
+  }
+  Shuffle {
+   black blue
+   out2 alpha
+   name Blue_Alpha
+   xpos -282
+   ypos -6
+  }
+  LensDistortion1_0 {
+   serializeKnob ""
+   serialiseKnob "22 serialization::archive 19 0 0 0 0 0 0 0 0 0 0 0 0"
+   distortion1 0.002
+   distortion2 {{parent.Red_Aberration.distortion2.main i}}
+   invertDistortion {{parent.Red_Aberration.invertDistortion.main i}}
+   cardScale {1.000999808 1.000999808 1}
+   a 0.00211793487
+   b -0.002515124623
+   c -0.001097998
+   name Blue_Aberration
+   xpos -282
+   ypos 121
+  }
+push $Ne0657800
+  Remove {
+   channels {rgba.red -rgba.green rgba.blue none}
+   name Green
+   xpos -428
+   ypos -110
+  }
+  Shuffle {
+   black green
+   out2 alpha
+   name Green_Alpha
+   xpos -428
+   ypos -9
+  }
+  LensDistortion1_0 {
+   serializeKnob ""
+   serialiseKnob "22 serialization::archive 19 0 0 0 0 0 0 0 0 0 0 0 0"
+   distortion1 -0.0001
+   distortion2 {{parent.Red_Aberration.distortion2.main i}}
+   invertDistortion {{parent.Red_Aberration.invertDistortion.main i}}
+   cardScale {1.000025034 1.000025034 1}
+   a -0.0002667494991
+   b 0.0001929992868
+   c 9.315232455e-05
+   name Green_Aberration
+   xpos -428
+   ypos 62
+  }
+push $Ne0657800
+  Remove {
+   channels {-rgba.red rgba.green rgba.blue none}
+   name Red
+   xpos -563
+   ypos -110
+  }
+  Shuffle {
+   black red
+   out2 alpha
+   name Red_Alpha
+   xpos -567
+   ypos -9
+  }
+  LensDistortion1_0 {
+   serializeKnob ""
+   serialiseKnob "22 serialization::archive 19 0 0 0 0 0 0 0 0 0 0 0 0"
+   distortion1 -0.0008
+   distortion2 {{(distortion1.main)/0.8 i}}
+   "Card Parameters" 1
+   cardScale {0.9982099533 0.9982099533 1}
+   a 0.002356246114
+   b -0.0004525523691
+   c -0.0004925240064
+   name Red_Aberration
+   xpos -559
+   ypos 102
+  }
+  Merge2 {
+   inputs 2
+   operation screen
+   name Red_and_Green
+   xpos -501
+   ypos 183
+  }
+  Merge2 {
+   inputs 2
+   operation screen
+   name Red_and_Green_and_Blue
+   xpos -378
+   ypos 183
+  }
+  Remove {
+   channels alpha
+   name Remove1
+   xpos -379
+   ypos 250
+  }
+  Output {
+   name Out
+   xpos -379
+   ypos 335
+  }
+ end_group
+push $Nd69f4000
+ Dot {
+  name Dot1
+  xpos -846
+  ypos -930
+ }
+set Nf440d000 [stack 0]
+ Dot {
+  name Dot2
+  xpos -727
+  ypos -930
+ }
+set Nf440d400 [stack 0]
+ Transform {
+  translate {0.4 0}
+  scale {1 1}
+  center {{parent.RED.center} {parent.RED.center}}
+  name BLUE
+  xpos -755
+  ypos -839
+ }
+push $Nf440d400
+ Transform {
+  translate {0.2 0}
+  center {{parent.RED.center} {parent.RED.center}}
+  name GREEN
+  xpos -755
+  ypos -865
+ }
+push $Nf440d400
+ Transform {
+  translate {-0.2 0}
+  center {{format.w/2} {format.h/2}}
+  name RED
+  xpos -755
+  ypos -891
+ }
+push $Nf440d000
+ ShuffleCopy {
+  inputs 2
+  red red
+  name ShuffleCopy2
+  xpos -874
+  ypos -891
+ }
+ ShuffleCopy {
+  inputs 2
+  green green
+  name ShuffleCopy3
+  xpos -874
+  ypos -865
+ }
+ ShuffleCopy {
+  inputs 2
+  blue blue
+  name ShuffleCopy4
+  xpos -874
+  ypos -839
+ }
+ Group {
+  name Chromatic_Aberration_35
+  xpos -874
+  ypos -712
+  addUserKnob {20 ChromaticAberration l Chromatic_Aberration}
+  addUserKnob {26 Chromatic_Aberration}
+  addUserKnob {41 Red T Red_Aberration.distortion1}
+  addUserKnob {41 Green T Green_Aberration.distortion1}
+  addUserKnob {41 Blue T Blue_Aberration.distortion1}
+  addUserKnob {41 invertDistortion l Remove T Red_Aberration.invertDistortion}
+ }
+  Input {
+   inputs 0
+   name Src
+   xpos -428
+   ypos -246
+  }
+  Remove {
+   channels alpha
+   name Remove2
+   xpos -428
+   ypos -171
+  }
+set Nf50f1400 [stack 0]
+  Remove {
+   channels {rgba.red rgba.green -rgba.blue none}
+   name Blue
+   xpos -282
+   ypos -110
+  }
+  Shuffle {
+   black blue
+   out2 alpha
+   name Blue_Alpha
+   xpos -282
+   ypos -6
+  }
+  LensDistortion1_0 {
+   serializeKnob ""
+   serialiseKnob "22 serialization::archive 19 0 0 0 0 0 0 0 0 0 0 0 0"
+   distortion1 {{parent.parent.Focus.knob.first_frame/7692307}}
+   distortion2 {{parent.Red_Aberration.distortion2.main i}}
+   invertDistortion {{parent.Red_Aberration.invertDistortion.main i}}
+   cardScale {1.000138044 1.000138044 1}
+   a -0.0002903009299
+   b 0.0001357617875
+   c 5.453987978e-05
+   name Blue_Aberration
+   xpos -282
+   ypos 121
+  }
+push $Nf50f1400
+  Remove {
+   channels {rgba.red -rgba.green rgba.blue none}
+   name Green
+   xpos -428
+   ypos -110
+  }
+  Shuffle {
+   black green
+   out2 alpha
+   name Green_Alpha
+   xpos -428
+   ypos -9
+  }
+  LensDistortion1_0 {
+   serializeKnob ""
+   serialiseKnob "22 serialization::archive 19 0 0 0 0 0 0 0 0 0 0 0 0"
+   distortion1 -0.0006
+   distortion2 {{parent.Red_Aberration.distortion2.main i}}
+   invertDistortion {{parent.Red_Aberration.invertDistortion.main i}}
+   cardScale {0.9996500015 0.9996500015 1}
+   a -0.0004305738548
+   b 0.000560717599
+   c 0.0003218888014
+   name Green_Aberration
+   xpos -428
+   ypos 62
+  }
+push $Nf50f1400
+  Remove {
+   channels {-rgba.red rgba.green rgba.blue none}
+   name Red
+   xpos -563
+   ypos -110
+  }
+  Shuffle {
+   black red
+   out2 alpha
+   name Red_Alpha
+   xpos -567
+   ypos -9
+  }
+  LensDistortion1_0 {
+   serializeKnob ""
+   serialiseKnob "22 serialization::archive 19 0 0 0 0 0 0 0 0 0 0 0 0"
+   distortion1 0.0001
+   distortion2 {{(distortion1.main)/0.8 i}}
+   "Card Parameters" 1
+   cardScale {1.000225186 1.000225186 1}
+   a -0.0002807275159
+   b 3.132862912e-05
+   c 5.644506382e-05
+   name Red_Aberration
+   xpos -559
+   ypos 102
+  }
+  Merge2 {
+   inputs 2
+   operation screen
+   name Red_and_Green
+   xpos -501
+   ypos 183
+  }
+  Merge2 {
+   inputs 2
+   operation screen
+   name Red_and_Green_and_Blue
+   xpos -378
+   ypos 183
+  }
+  Remove {
+   channels alpha
+   name Remove1
+   xpos -379
+   ypos 250
+  }
+  Output {
+   name Out
+   xpos -379
+   ypos 335
+  }
+ end_group
+push $Nd69f4000
+ Dot {
+  name Dot12
+  xpos -1074
+  ypos -931
+ }
+set N34e1cc00 [stack 0]
+ Dot {
+  name Dot13
+  xpos -955
+  ypos -931
+ }
+set N34e1d000 [stack 0]
+ Transform {
+  scale {0.998 1}
+  center {{parent.RED1.center} {parent.RED1.center}}
+  name BLUE1
+  xpos -983
+  ypos -840
+ }
+push $N34e1d000
+ Transform {
+  center {{parent.RED1.center} {parent.RED1.center}}
+  name GREEN1
+  xpos -983
+  ypos -866
+ }
+push $N34e1d000
+ Transform {
+  scale {1.001 1}
+  center {{format.w/2} {format.h/2}}
+  name RED1
+  xpos -983
+  ypos -892
+ }
+push $N34e1cc00
+ ShuffleCopy {
+  inputs 2
+  red red
+  name ShuffleCopy1
+  xpos -1102
+  ypos -892
+ }
+ ShuffleCopy {
+  inputs 2
+  green green
+  name ShuffleCopy6
+  xpos -1102
+  ypos -866
+ }
+ ShuffleCopy {
+  inputs 2
+  blue blue
+  name ShuffleCopy7
+  xpos -1102
+  ypos -840
+ }
+ Group {
+  name Chromatic_Aberration_28
+  xpos -1102
+  ypos -710
+  addUserKnob {20 ChromaticAberration l Chromatic_Aberration}
+  addUserKnob {26 Chromatic_Aberration}
+  addUserKnob {41 Red T Red_Aberration.distortion1}
+  addUserKnob {41 Green T Green_Aberration.distortion1}
+  addUserKnob {41 Blue T Blue_Aberration.distortion1}
+  addUserKnob {41 invertDistortion l Remove T Red_Aberration.invertDistortion}
+ }
+  Input {
+   inputs 0
+   name Src
+   xpos -428
+   ypos -246
+  }
+  Remove {
+   channels alpha
+   name Remove2
+   xpos -428
+   ypos -171
+  }
+set N18daf000 [stack 0]
+  Remove {
+   channels {rgba.red rgba.green -rgba.blue none}
+   name Blue
+   xpos -282
+   ypos -110
+  }
+  Shuffle {
+   black blue
+   out2 alpha
+   name Blue_Alpha
+   xpos -282
+   ypos -6
+  }
+  LensDistortion1_0 {
+   serializeKnob ""
+   serialiseKnob "22 serialization::archive 19 0 0 0 0 0 0 0 0 0 0 0 0"
+   distortion1 0.006
+   distortion2 {{parent.Red_Aberration.distortion2.main}}
+   invertDistortion {{parent.Red_Aberration.invertDistortion.main}}
+   cardScale {1.004016042 1.004016042 1}
+   a 0.003420558525
+   b -0.005320047028
+   c -0.003177505918
+   name Blue_Aberration
+   xpos -282
+   ypos 121
+  }
+push $N18daf000
+  Remove {
+   channels {rgba.red -rgba.green rgba.blue none}
+   name Green
+   xpos -428
+   ypos -110
+  }
+  Shuffle {
+   black green
+   out2 alpha
+   name Green_Alpha
+   xpos -428
+   ypos -9
+  }
+  LensDistortion1_0 {
+   serializeKnob ""
+   serialiseKnob "22 serialization::archive 19 0 0 0 0 0 0 0 0 0 0 0 0"
+   distortion1 0.0003
+   distortion2 {{parent.Red_Aberration.distortion2.main}}
+   invertDistortion {{parent.Red_Aberration.invertDistortion.main}}
+   cardScale {1.000676394 1.000676394 1}
+   a -0.0009323836421
+   b 0.0002529720077
+   c 0.0001185679212
+   name Green_Aberration
+   xpos -428
+   ypos 62
+  }
+push $N18daf000
+  Remove {
+   channels {-rgba.red rgba.green rgba.blue none}
+   name Red
+   xpos -563
+   ypos -110
+  }
+  Shuffle {
+   black red
+   out2 alpha
+   name Red_Alpha
+   xpos -567
+   ypos -9
+  }
+  LensDistortion1_0 {
+   serializeKnob ""
+   serialiseKnob "22 serialization::archive 19 0 0 0 0 0 0 0 0 0 0 0 0"
+   distortion1 -0.0016
+   distortion2 {{(distortion1.main)/0.8}}
+   "Card Parameters" 1
+   cardScale {0.9964396358 0.9964396358 1}
+   a 0.004488755483
+   b -0.0007023682701
+   c -0.0007817881997
+   name Red_Aberration
+   xpos -567
+   ypos 63
+  }
+  Merge2 {
+   inputs 2
+   operation screen
+   name Red_and_Green
+   xpos -501
+   ypos 183
+  }
+  Merge2 {
+   inputs 2
+   operation screen
+   name Red_and_Green_and_Blue
+   xpos -378
+   ypos 183
+  }
+  Remove {
+   channels alpha
+   name Remove1
+   xpos -379
+   ypos 250
+  }
+  Output {
+   name Out
+   xpos -379
+   ypos 314
+  }
+ end_group
+ Switch {
+  inputs 7
+  which {{parent.preferences.label_lenseswitch}}
+  name LesesSwitch1
+  xpos -1102
+  ypos -654
+ }
+ Group {
+  name Chromatic_Aberration_Y
+  xpos -1102
+  ypos -628
+  addUserKnob {20 User l ChromaticAberation}
+  addUserKnob {20 redscale l "red scale" n 1}
+  addUserKnob {7 redxscale l "red x scale" R -0.2 0.2}
+  addUserKnob {7 redyscale l "red y scale" R -0.2 0.2}
+  addUserKnob {20 endGroup n -1}
+  addUserKnob {20 greenscale l "green scale" n 1}
+  addUserKnob {7 greenxscale l "green x scale" R -0.2 0.2}
+  addUserKnob {7 greenyscale l "green y scale" R -0.2 0.2}
+  addUserKnob {20 endGroup_1 l endGroup n -1}
+  addUserKnob {20 bluescale l "blue scale" n 1}
+  addUserKnob {7 bluexscale l "blue x scale" R -0.2 0.2}
+  addUserKnob {7 blueyscale l "blue y scale" R -0.2 0.2}
+  blueyscale -0.001
+  addUserKnob {20 endGroup_2 l endGroup n -1}
+ }
+  Input {
+   inputs 0
+   name Input
+   xpos 25
+   ypos 85
+  }
+  Dot {
+   name Dot1
+   xpos 59
+   ypos 125
+  }
+set N37bc1000 [stack 0]
+  Dot {
+   name Dot2
+   xpos -153
+   ypos 125
+  }
+  Dot {
+   name Dot3
+   xpos -153
+   ypos 295
+  }
+push $N37bc1000
+  Shuffle {
+   red blue
+   green blue
+   alpha blue
+   name Shuffle3
+   xpos 123
+   ypos 163
+  }
+  Transform {
+   scale {{"1 + parent.bluexscale" i} {"1 + parent.blueyscale" i}}
+   center {{width/2 i} {height/2 i}}
+   name Transform3
+   xpos 123
+   ypos 189
+  }
+push $N37bc1000
+  Shuffle {
+   red green
+   blue green
+   alpha green
+   name Shuffle2
+   xpos 25
+   ypos 164
+  }
+  Transform {
+   scale {{"1 + parent.greenxscale" i} {1+parent.greenyscale i}}
+   center {{width/2 i} {height/2 i}}
+   name Transform2
+   xpos 25
+   ypos 190
+  }
+push $N37bc1000
+  Shuffle {
+   green red
+   blue red
+   alpha red
+   name Shuffle1
+   xpos -76
+   ypos 163
+  }
+  Transform {
+   scale {{"1 + parent.redxscale"} {"1 + parent.redyscale"}}
+   center {{width/2} {height/2}}
+   name Transform1
+   xpos -76
+   ypos 189
+  }
+  ShuffleCopy {
+   inputs 2
+   green green
+   name ShuffleCopy1
+   xpos -76
+   ypos 215
+  }
+  ShuffleCopy {
+   inputs 2
+   blue blue
+   name ShuffleCopy2
+   xpos -76
+   ypos 241
+  }
+  ShuffleCopy {
+   inputs 2
+   name ShuffleCopy3
+   xpos -76
+   ypos 291
+  }
+  Output {
+   name Output
+   xpos -76
+   ypos 317
+  }
+ end_group
+push $Nd69f4000
+ Dot {
+  name Dot8
+  xpos -1258
+  ypos -1054
+ }
+ Dot {
+  name Dot9
+  xpos -1258
+  ypos -559
+ }
+ Dot {
+  name Dot10
+  xpos -1201
+  ypos -559
+ }
+set N3bcdec00 [stack 0]
+ Dot {
+  name Dot11
+  xpos -1201
+  ypos -598
+ }
+ Dissolve {
+  inputs 2
+  which {{parent.preferences.label_chr_aber}}
+  name Level_ChrAber
+  xpos -1102
+  ypos -602
+ }
+push $N3bcdec00
+ Switch {
+  inputs 2
+  which {{parent.preferences.label_und_dis}}
+  name Switch_ChrAber
+  xpos -1102
+  ypos -557
+  disable {{parent.preferences_label_disable}}
+ }
+ Dot {
+  name Dot15
+  xpos -1074
+  ypos -354
+ }
+set N3bcdfc00 [stack 0]
+ FrameHold {
+  firstFrame 1
+  name FrameHold2
+  xpos -1012
+  ypos -358
+ }
+ Dot {
+  name Dot5
+  xpos -834
+  ypos -354
+ }
+set N3c97c000 [stack 0]
+ Dot {
+  name Dot6
+  xpos -657
+  ypos -354
+ }
+set N3c97c400 [stack 0]
+ Dot {
+  name Dot3
+  xpos -465
+  ypos -354
+ }
+set N3c97c800 [stack 0]
+ Dot {
+  name Dot4
+  xpos -291
+  ypos -354
+ }
+set N3c97cc00 [stack 0]
+ Dot {
+  name Dot18
+  xpos -100
+  ypos -354
+ }
+set N3c97d000 [stack 0]
+ Dot {
+  name Dot19
+  xpos 89
+  ypos -354
+ }
+set N3c97d400 [stack 0]
+ Dot {
+  name Dot20
+  xpos 264
+  ypos -354
+ }
+set N3c97d800 [stack 0]
+ Dot {
+  name Dot21
+  xpos 453
+  ypos -354
+ }
+set N3c97dc00 [stack 0]
+ Dot {
+  name Dot22
+  xpos 628
+  ypos -354
+ }
+set N3d67e000 [stack 0]
+ Dot {
+  name Dot23
+  xpos 817
+  ypos -354
+ }
+set N3d67e400 [stack 0]
+ Dot {
+  name Dot24
+  xpos 993
+  ypos -354
+ }
+set N3d67e800 [stack 0]
+ Dot {
+  name Dot25
+  xpos 1182
+  ypos -354
+ }
+set N3d67ec00 [stack 0]
+ Dot {
+  name Dot26
+  xpos 1357
+  ypos -354
+ }
+set N3d67f000 [stack 0]
+ Dot {
+  name Dot27
+  xpos 1546
+  ypos -354
+ }
+ LD_3DE4_Anamorphic_Standard_Degree_4 {
+  direction distort
+  mode STMap
+  tde4_focal_length_cm 11
+  tde4_custom_focus_distance_cm {{curve x100 100 x10000 10000}}
+  tde4_filmback_width_cm 4.752
+  tde4_filmback_height_cm 1.782
+  Cx02_Degree_2 {{curve x100 -0.0133504 x150 -0.0152717 -0.0141008 -0.0158774 -0.0159487 -0.0172443 -0.0155132 x500 -0.0169489 -0.0156255 x800 -0.0151173 -0.0168866 x2000 -0.0158843 x4000 -0.0143948 x10000 -0.0153744}}
+  Cy02_Degree_2 {{curve x100 -0.0149643 x150 -0.0179433 -0.013752 -0.0160071 -0.0171702 -0.0131408 -0.0176697 x500 -0.0147118 -0.0198204 x800 -0.0128624 -0.0139197 x2000 -0.0152036 x4000 -0.0145702 x10000 -0.0196256}}
+  Cx22_Degree_2 {{curve x100 0.0237958 x150 0.0241699 0.0224761 0.0238482 0.0236084 0.0246283 0.0229742 x500 0.0243581 0.0227753 x800 0.0221957 0.0238366 x2000 0.0226319 x4000 0.0213521 x10000 0.0220801}}
+  Cy22_Degree_2 {{curve x100 0.0342411 x150 0.0364471 0.0318799 0.0329506 0.0335989 0.0314587 0.0338526 x500 0.0312036 0.0359064 x800 0.0290986 0.0300658 x2000 0.0321516 x4000 0.0295512 x10000 0.0351075}}
+  Cx04_Degree_4 {{curve x100 -0.0091558 x150 -0.0018701 -0.0104834 -0.0017221 -0.0012672 0.0078447 -0.0050419 x500 0.0050262 -0.0039244 x800 -0.0039385 0.00427 x2000 -0.0084384 x4000 -0.0107595 x10000 -0.0079626}}
+  Cy04_Degree_4 {{curve x100 -0.0158117 x150 0.0076952 -0.0113182 -0.0080443 -0.0021337 -0.0062341 -0.0004574 x500 -0.0118314 0.0126159 x800 -0.0216767 -0.0147772 x2000 -0.0039697 x4000 -0.0223757 x10000 0.0110996}}
+  Cx24_Degree_4 {{curve x100 0.0133884 x150 0.0040702 0.0153866 0.0038292 0.0032842 -0.008911 0.0082323 x500 -0.0053616 0.0066756 x800 0.0063421 -0.0042962 x2000 0.0130408 x4000 0.0152803 x10000 0.0119082}}
+  Cy24_Degree_4 {{curve x100 0.0204173 x150 -0.0123006 0.0125819 0.0096928 0.0020912 0.0039217 -9.43e-05 x500 0.0142138 -0.0177687 x800 0.027321 0.0181407 x2000 0.0023876 x4000 0.0301678 x10000 -0.0156967}}
+  Cx44_Degree_4 {{curve x100 -0.0025999 x150 -0.0003694 -0.0031639 -0.0003839 -0.0002319 0.002891 -0.0015239 x500 0.0018634 -0.0010394 x800 -0.0007484 0.0016829 x2000 -0.002922 x4000 -0.0030817 x10000 -0.0023847}}
+  Cy44_Degree_4 {{curve x100 -0.0055601 x150 0.0033847 -0.0027839 -0.0026463 -0.0006545 0.0006445 -0.0002432 x500 -0.0034311 0.0040557 x800 -0.0065687 -0.0042696 x2000 -0.000375 x4000 -0.0082443 x10000 0.0039955}}
+  Lens_Rotation {{curve x100 0.431214 x150 0.431214 0.431214 0.431214 0.431214 0.431214 0.431214 x500 0.431214 0.431214 x800 0.431214 0.431214 x2000 0.431214 x4000 0.431214 x10000 0.431214}}
+  Squeeze_X {{curve x100 1.0184813 x150 1.0005514 0.9919786 0.987122 0.9838845 0.9816477 0.979979 x500 0.9775782 0.9760034 x800 0.9741514 0.9730643 x2000 0.970788 x4000 0.9693686 x10000 0.968538}}
+  Squeeze_Y {{curve x100 1 x150 0.9993735 0.9986935 0.9987896 0.9987645 0.9981561 0.9986688 x500 0.9983321 0.9986099 x800 0.99808 0.9981273 x2000 0.9979754 x4000 0.998133 x10000 0.9983093}}
+  name LD_3DE4_110mm_12
+  xpos 1518
+  ypos -310
+ }
+push $N3d67f000
+ LD_3DE4_Anamorphic_Standard_Degree_4 {
+  direction distort
+  mode STMap
+  tde4_focal_length_cm 11
+  tde4_custom_focus_distance_cm {{curve x100 100 x10000 10000}}
+  tde4_filmback_width_cm 4.752
+  tde4_filmback_height_cm 1.782
+  Cx02_Degree_2 {{curve x100 -0.0133504 x150 -0.0152717 -0.0141008 -0.0158774 -0.0159487 -0.0172443 -0.0155132 x500 -0.0169489 -0.0156255 x800 -0.0151173 -0.0168866 x2000 -0.0158843 x4000 -0.0143948 x10000 -0.0153744}}
+  Cy02_Degree_2 {{curve x100 -0.0149643 x150 -0.0179433 -0.013752 -0.0160071 -0.0171702 -0.0131408 -0.0176697 x500 -0.0147118 -0.0198204 x800 -0.0128624 -0.0139197 x2000 -0.0152036 x4000 -0.0145702 x10000 -0.0196256}}
+  Cx22_Degree_2 {{curve x100 0.0237958 x150 0.0241699 0.0224761 0.0238482 0.0236084 0.0246283 0.0229742 x500 0.0243581 0.0227753 x800 0.0221957 0.0238366 x2000 0.0226319 x4000 0.0213521 x10000 0.0220801}}
+  Cy22_Degree_2 {{curve x100 0.0342411 x150 0.0364471 0.0318799 0.0329506 0.0335989 0.0314587 0.0338526 x500 0.0312036 0.0359064 x800 0.0290986 0.0300658 x2000 0.0321516 x4000 0.0295512 x10000 0.0351075}}
+  Cx04_Degree_4 {{curve x100 -0.0091558 x150 -0.0018701 -0.0104834 -0.0017221 -0.0012672 0.0078447 -0.0050419 x500 0.0050262 -0.0039244 x800 -0.0039385 0.00427 x2000 -0.0084384 x4000 -0.0107595 x10000 -0.0079626}}
+  Cy04_Degree_4 {{curve x100 -0.0158117 x150 0.0076952 -0.0113182 -0.0080443 -0.0021337 -0.0062341 -0.0004574 x500 -0.0118314 0.0126159 x800 -0.0216767 -0.0147772 x2000 -0.0039697 x4000 -0.0223757 x10000 0.0110996}}
+  Cx24_Degree_4 {{curve x100 0.0133884 x150 0.0040702 0.0153866 0.0038292 0.0032842 -0.008911 0.0082323 x500 -0.0053616 0.0066756 x800 0.0063421 -0.0042962 x2000 0.0130408 x4000 0.0152803 x10000 0.0119082}}
+  Cy24_Degree_4 {{curve x100 0.0204173 x150 -0.0123006 0.0125819 0.0096928 0.0020912 0.0039217 -9.43e-05 x500 0.0142138 -0.0177687 x800 0.027321 0.0181407 x2000 0.0023876 x4000 0.0301678 x10000 -0.0156967}}
+  Cx44_Degree_4 {{curve x100 -0.0025999 x150 -0.0003694 -0.0031639 -0.0003839 -0.0002319 0.002891 -0.0015239 x500 0.0018634 -0.0010394 x800 -0.0007484 0.0016829 x2000 -0.002922 x4000 -0.0030817 x10000 -0.0023847}}
+  Cy44_Degree_4 {{curve x100 -0.0055601 x150 0.0033847 -0.0027839 -0.0026463 -0.0006545 0.0006445 -0.0002432 x500 -0.0034311 0.0040557 x800 -0.0065687 -0.0042696 x2000 -0.000375 x4000 -0.0082443 x10000 0.0039955}}
+  Lens_Rotation {{curve x100 0.431214 x150 0.431214 0.431214 0.431214 0.431214 0.431214 0.431214 x500 0.431214 0.431214 x800 0.431214 0.431214 x2000 0.431214 x4000 0.431214 x10000 0.431214}}
+  Squeeze_X {{curve x100 1.0184813 x150 1.0005514 0.9919786 0.987122 0.9838845 0.9816477 0.979979 x500 0.9775782 0.9760034 x800 0.9741514 0.9730643 x2000 0.970788 x4000 0.9693686 x10000 0.968538}}
+  Squeeze_Y {{curve x100 1 x150 0.9993735 0.9986935 0.9987896 0.9987645 0.9981561 0.9986688 x500 0.9983321 0.9986099 x800 0.99808 0.9981273 x2000 0.9979754 x4000 0.998133 x10000 0.9983093}}
+  name LD_3DE4_110mm_1
+  xpos 1329
+  ypos -312
+ }
+ Switch {
+  inputs 2
+  which {{parent.preferences.label_und_dis}}
+  name Undistort_Distort6
+  xpos 1426
+  ypos -238
+ }
+push $N3d67ec00
+ LD_3DE4_Anamorphic_Standard_Degree_4 {
+  direction distort
+  mode STMap
+  tde4_focal_length_cm 3
+  tde4_custom_focus_distance_cm {{curve x100 100 x10000 10000}}
+  tde4_filmback_width_cm 4.752
+  tde4_filmback_height_cm 1.782
+  Cx02_Degree_2 {{curve x100 0.0386601 x150 0.0388967 0.0340897 0.0321989 0.0324948 0.0329315 0.0335317 x500 0.03366 0.0288987 x800 0.0334644 0.0278908 x2000 0.0312313 x4000 0.0296672 x10000 0.0315887}}
+  Cy02_Degree_2 {{curve x100 0.0359939 x150 0.0331972 0.0319336 0.031476 0.0365046 0.0338834 0.0329842 x500 0.0350048 0.0356518 x800 0.0492754 0.0326358 x2000 0.0393704 x4000 0.0386959 x10000 0.0333753}}
+  Cx22_Degree_2 {{curve x100 0.0024386 x150 -0.002091 -0.0003082 0.000944 -0.00034 -0.0011796 -0.0018546 x500 -0.0024783 -0.0003753 x800 -0.005111 0.0002784 x2000 -0.0034375 x4000 -0.0019519 x10000 -0.0038585}}
+  Cy22_Degree_2 {{curve x100 0.0176675 x150 0.0152476 0.0161961 0.0154954 0.0099493 0.0117361 0.0127088 x500 0.0099347 0.0098013 x800 -0.0042938 0.0124198 x2000 0.0050379 x4000 0.0054448 x10000 0.0101285}}
+  Cx04_Degree_4 {{curve x100 0.0058928 x150 -0.0098102 0.0085805 0.0167968 0.0124199 0.0051822 0.0032396 x500 -0.0027903 0.0224938 x800 -0.0091226 0.0315531 x2000 0.0041745 x4000 0.0105996 x10000 -0.0026138}}
+  Cy04_Degree_4 {{curve x100 0.0231503 x150 0.0155309 0.0182007 0.0238224 -0.0092553 0.0067593 0.0118526 x500 -0.0034382 -0.0040169 x800 -0.0782757 0.0315531 x2000 -0.024478 x4000 -0.024977 x10000 -0.0005207}}
+  Cx24_Degree_4 {{curve x100 0.0027445 x150 0.0243783 0.0017494 -0.0096609 -0.0036467 0.0059505 0.0081374 x500 0.016255 -0.0143362 x800 0.0273127 -0.0270524 x2000 0.0092627 x4000 0.0007334 x10000 0.0180689}}
+  Cy24_Degree_4 {{curve x100 -0.0227774 x150 -0.0112319 -0.0173651 -0.0247643 0.0193695 -0.0016348 -0.0090818 x500 0.0118437 0.0110888 x800 0.1102112 -0.0144668 x2000 0.0380936 x4000 0.0389698 x10000 0.006981}}
+  Cx44_Degree_4 {{curve x100 0.0007388 x150 -0.0040593 0.0021488 0.0048208 0.0037748 0.0012285 0.0007818 x500 -0.0013658 0.0070857 x800 -0.0031812 0.0104037 x2000 0.0013125 x4000 0.003184 x10000 -0.0011312}}
+  Cy44_Degree_4 {{curve x100 0.0077877 x150 0.0041749 0.0056596 0.0075263 -0.0032405 0.0023485 0.0042755 x500 -0.0013645 -0.0009447 x800 -0.025796 0.0056237 x2000 -0.0074833 x4000 -0.0081797 x10000 -0.0002162}}
+  Lens_Rotation {{curve x100 0.7796669 x150 0.7796669 0.7796669 0.7796669 0.7796669 0.7796669 0.7796669 x500 0.7796669 0.7796669 x800 0.7796669 0.7796669 x2000 0.7796669 x4000 0.7796669 x10000 0.7796669}}
+  Squeeze_X {{curve x100 1.0382587 x150 1.0069082 0.9922907 0.9830482 0.9771159 0.9727873 0.9697124 x500 0.9654811 0.9629702 x800 0.9591464 0.9572175 x2000 0.952634 x4000 0.9504096 x10000 0.948594}}
+  Squeeze_Y {{curve x100 1 x150 0.9919139 0.9880083 0.9854482 0.9836697 0.9825796 0.9817814 x500 0.980612 0.9797282 x800 0.9780072 0.9782906 x2000 0.9767624 x4000 0.9762415 x10000 0.9761282}}
+  name LD_3DE4_80mm_12
+  xpos 1154
+  ypos -312
+ }
+push $N3d67e800
+ LD_3DE4_Anamorphic_Standard_Degree_4 {
+  mode STMap
+  tde4_focal_length_cm 3
+  tde4_custom_focus_distance_cm {{curve x100 100 x10000 10000}}
+  tde4_filmback_width_cm 4.752
+  tde4_filmback_height_cm 1.782
+  Cx02_Degree_2 {{curve x100 0.0386601 x150 0.0388967 0.0340897 0.0321989 0.0324948 0.0329315 0.0335317 x500 0.03366 0.0288987 x800 0.0334644 0.0278908 x2000 0.0312313 x4000 0.0296672 x10000 0.0315887}}
+  Cy02_Degree_2 {{curve x100 0.0359939 x150 0.0331972 0.0319336 0.031476 0.0365046 0.0338834 0.0329842 x500 0.0350048 0.0356518 x800 0.0492754 0.0326358 x2000 0.0393704 x4000 0.0386959 x10000 0.0333753}}
+  Cx22_Degree_2 {{curve x100 0.0024386 x150 -0.002091 -0.0003082 0.000944 -0.00034 -0.0011796 -0.0018546 x500 -0.0024783 -0.0003753 x800 -0.005111 0.0002784 x2000 -0.0034375 x4000 -0.0019519 x10000 -0.0038585}}
+  Cy22_Degree_2 {{curve x100 0.0176675 x150 0.0152476 0.0161961 0.0154954 0.0099493 0.0117361 0.0127088 x500 0.0099347 0.0098013 x800 -0.0042938 0.0124198 x2000 0.0050379 x4000 0.0054448 x10000 0.0101285}}
+  Cx04_Degree_4 {{curve x100 0.0058928 x150 -0.0098102 0.0085805 0.0167968 0.0124199 0.0051822 0.0032396 x500 -0.0027903 0.0224938 x800 -0.0091226 0.0315531 x2000 0.0041745 x4000 0.0105996 x10000 -0.0026138}}
+  Cy04_Degree_4 {{curve x100 0.0231503 x150 0.0155309 0.0182007 0.0238224 -0.0092553 0.0067593 0.0118526 x500 -0.0034382 -0.0040169 x800 -0.0782757 0.0315531 x2000 -0.024478 x4000 -0.024977 x10000 -0.0005207}}
+  Cx24_Degree_4 {{curve x100 0.0027445 x150 0.0243783 0.0017494 -0.0096609 -0.0036467 0.0059505 0.0081374 x500 0.016255 -0.0143362 x800 0.0273127 -0.0270524 x2000 0.0092627 x4000 0.0007334 x10000 0.0180689}}
+  Cy24_Degree_4 {{curve x100 -0.0227774 x150 -0.0112319 -0.0173651 -0.0247643 0.0193695 -0.0016348 -0.0090818 x500 0.0118437 0.0110888 x800 0.1102112 -0.0144668 x2000 0.0380936 x4000 0.0389698 x10000 0.006981}}
+  Cx44_Degree_4 {{curve x100 0.0007388 x150 -0.0040593 0.0021488 0.0048208 0.0037748 0.0012285 0.0007818 x500 -0.0013658 0.0070857 x800 -0.0031812 0.0104037 x2000 0.0013125 x4000 0.003184 x10000 -0.0011312}}
+  Cy44_Degree_4 {{curve x100 0.0077877 x150 0.0041749 0.0056596 0.0075263 -0.0032405 0.0023485 0.0042755 x500 -0.0013645 -0.0009447 x800 -0.025796 0.0056237 x2000 -0.0074833 x4000 -0.0081797 x10000 -0.0002162}}
+  Lens_Rotation {{curve x100 0.7796669 x150 0.7796669 0.7796669 0.7796669 0.7796669 0.7796669 0.7796669 x500 0.7796669 0.7796669 x800 0.7796669 0.7796669 x2000 0.7796669 x4000 0.7796669 x10000 0.7796669}}
+  Squeeze_X {{curve x100 1.0382587 x150 1.0069082 0.9922907 0.9830482 0.9771159 0.9727873 0.9697124 x500 0.9654811 0.9629702 x800 0.9591464 0.9572175 x2000 0.952634 x4000 0.9504096 x10000 0.948594}}
+  Squeeze_Y {{curve x100 1 x150 0.9919139 0.9880083 0.9854482 0.9836697 0.9825796 0.9817814 x500 0.980612 0.9797282 x800 0.9780072 0.9782906 x2000 0.9767624 x4000 0.9762415 x10000 0.9761282}}
+  name LD_3DE4_80mm_1
+  xpos 965
+  ypos -314
+ }
+ Switch {
+  inputs 2
+  which {{parent.preferences.label_und_dis}}
+  name Undistort_Distort5
+  xpos 1062
+  ypos -238
+ }
+push $N3d67e400
+ LD_3DE4_Anamorphic_Standard_Degree_4 {
+  direction distort
+  mode STMap
+  tde4_focal_length_cm 3
+  tde4_custom_focus_distance_cm {{curve x100 100 x10000 10000}}
+  tde4_filmback_width_cm 4.752
+  tde4_filmback_height_cm 1.782
+  Cx02_Degree_2 {{curve x100 0.0519018 x150 0.0518955 0.0463211 0.0410239 0.0403778 0.040202 0.0428765 x500 0.0468695 0.0439339 x800 0.0431554 0.0481207 x2000 0.050148 x4000 0.0394371 x10000 0.0428927}}
+  Cy02_Degree_2 {{curve x100 0.0403962 x150 0.0391184 0.0372053 0.0376554 0.0467647 0.0433937 0.0383117 x500 0.0338294 0.0352154 x800 0.0337157 0.0404086 x2000 0.0384604 x4000 0.0424214 x10000 0.0373184}}
+  Cx22_Degree_2 {{curve x100 0.0055792 x150 0.001268 0.005285 0.0078693 0.0070711 0.0079736 0.005097 x500 0.0015551 0.0038262 x800 0.0044602 -0.0008528 x2000 -0.0031305 x4000 0.0056196 x10000 0.0023691}}
+  Cy22_Degree_2 {{curve x100 0.0281936 x150 0.0238685 0.0236349 0.0226776 0.0161513 0.0153913 0.0200298 x500 0.0238927 0.0223606 x800 0.0227247 0.0168623 x2000 0.0187628 x4000 0.0142967 x10000 0.0199411}}
+  Cx04_Degree_4 {{curve x100 -0.0072703 x150 -0.0292994 0.0023345 0.0194415 0.0123207 0.0237702 0.0040254 x500 -0.0157889 0.0001774 x800 0.0049551 -0.0303788 x2000 -0.0453342 x4000 0.0174958 x10000 -0.0154615}}
+  Cy04_Degree_4 {{curve x100 0.0189358 x150 0.0063126 0.022244 0.0202855 0.0118331 -0.0038344 0.0089513 x500 0.0352612 0.0262158 x800 0.0269583 0.000293 x2000 0.016609 x4000 7.21e-05 x10000 0.0042237}}
+  Cx24_Degree_4 {{curve x100 0.0140579 x150 0.0442795 0.0018544 -0.0180621 -0.0075243 -0.0244003 0.0015647 x500 0.0263679 0.0055329 x800 -0.001145 0.0459687 x2000 0.0657411 x4000 -0.0154185 x10000 0.0284158}}
+  Cy24_Degree_4 {{curve x100 -0.0145764 x150 0.0043172 -0.0169936 -0.0152866 -0.0108254 0.0164726 0.0001544 x500 -0.0349259 -0.0233382 x800 -0.0229117 0.0104196 x2000 -0.0122612 x4000 0.0092293 x10000 0.002869}}
+  Cx44_Degree_4 {{curve x100 -0.0041656 x150 -0.0109897 -0.0001635 0.0045142 0.0017713 0.0063577 1.17e-05 x500 -0.0056624 -0.0004024 x800 0.0013347 -0.0103362 x2000 -0.0152849 x4000 0.005057 x10000 -0.0063483}}
+  Cy44_Degree_4 {{curve x100 0.0016816 x150 -0.0040986 0.0026369 0.0010863 0.0039831 -0.0053848 -0.0025729 x500 0.0072455 0.0043386 x800 0.0034631 -0.0037645 x2000 0.0023889 x4000 -0.0024994 x10000 -0.0015086}}
+  Lens_Rotation {{curve x100 0 x150 0 0 0 0 0 0 x500 0 0 x800 0 0 x2000 0 x4000 0 x10000 0}}
+  Squeeze_X {{curve x100 1.0215093 x150 0.9970984 0.9843654 0.9776232 0.973033 0.9694269 0.966769 x500 0.9629308 0.9606908 x800 0.957788 0.9560121 x2000 0.9524666 x4000 0.9510493 x10000 0.9492075}}
+  Squeeze_Y {{curve x100 1 x150 0.994618 0.9916129 0.9898755 0.9876465 0.987607 0.9874462 x500 0.9867617 0.986225 x800 0.9857421 0.9848815 x2000 0.9840647 x4000 0.9834488 x10000 0.9834267}}
+  name LD_3DE4_65mm_12
+  xpos 789
+  ypos -313
+ }
+push $N3d67e000
+ LD_3DE4_Anamorphic_Standard_Degree_4 {
+  mode STMap
+  tde4_focal_length_cm 3
+  tde4_custom_focus_distance_cm {{curve x100 100 x10000 10000}}
+  tde4_filmback_width_cm 4.752
+  tde4_filmback_height_cm 1.782
+  Cx02_Degree_2 {{curve x100 0.0519018 x150 0.0518955 0.0463211 0.0410239 0.0403778 0.040202 0.0428765 x500 0.0468695 0.0439339 x800 0.0431554 0.0481207 x2000 0.050148 x4000 0.0394371 x10000 0.0428927}}
+  Cy02_Degree_2 {{curve x100 0.0403962 x150 0.0391184 0.0372053 0.0376554 0.0467647 0.0433937 0.0383117 x500 0.0338294 0.0352154 x800 0.0337157 0.0404086 x2000 0.0384604 x4000 0.0424214 x10000 0.0373184}}
+  Cx22_Degree_2 {{curve x100 0.0055792 x150 0.001268 0.005285 0.0078693 0.0070711 0.0079736 0.005097 x500 0.0015551 0.0038262 x800 0.0044602 -0.0008528 x2000 -0.0031305 x4000 0.0056196 x10000 0.0023691}}
+  Cy22_Degree_2 {{curve x100 0.0281936 x150 0.0238685 0.0236349 0.0226776 0.0161513 0.0153913 0.0200298 x500 0.0238927 0.0223606 x800 0.0227247 0.0168623 x2000 0.0187628 x4000 0.0142967 x10000 0.0199411}}
+  Cx04_Degree_4 {{curve x100 -0.0072703 x150 -0.0292994 0.0023345 0.0194415 0.0123207 0.0237702 0.0040254 x500 -0.0157889 0.0001774 x800 0.0049551 -0.0303788 x2000 -0.0453342 x4000 0.0174958 x10000 -0.0154615}}
+  Cy04_Degree_4 {{curve x100 0.0189358 x150 0.0063126 0.022244 0.0202855 0.0118331 -0.0038344 0.0089513 x500 0.0352612 0.0262158 x800 0.0269583 0.000293 x2000 0.016609 x4000 7.21e-05 x10000 0.0042237}}
+  Cx24_Degree_4 {{curve x100 0.0140579 x150 0.0442795 0.0018544 -0.0180621 -0.0075243 -0.0244003 0.0015647 x500 0.0263679 0.0055329 x800 -0.001145 0.0459687 x2000 0.0657411 x4000 -0.0154185 x10000 0.0284158}}
+  Cy24_Degree_4 {{curve x100 -0.0145764 x150 0.0043172 -0.0169936 -0.0152866 -0.0108254 0.0164726 0.0001544 x500 -0.0349259 -0.0233382 x800 -0.0229117 0.0104196 x2000 -0.0122612 x4000 0.0092293 x10000 0.002869}}
+  Cx44_Degree_4 {{curve x100 -0.0041656 x150 -0.0109897 -0.0001635 0.0045142 0.0017713 0.0063577 1.17e-05 x500 -0.0056624 -0.0004024 x800 0.0013347 -0.0103362 x2000 -0.0152849 x4000 0.005057 x10000 -0.0063483}}
+  Cy44_Degree_4 {{curve x100 0.0016816 x150 -0.0040986 0.0026369 0.0010863 0.0039831 -0.0053848 -0.0025729 x500 0.0072455 0.0043386 x800 0.0034631 -0.0037645 x2000 0.0023889 x4000 -0.0024994 x10000 -0.0015086}}
+  Lens_Rotation {{curve x100 0 x150 0 0 0 0 0 0 x500 0 0 x800 0 0 x2000 0 x4000 0 x10000 0}}
+  Squeeze_X {{curve x100 1.0215093 x150 0.9970984 0.9843654 0.9776232 0.973033 0.9694269 0.966769 x500 0.9629308 0.9606908 x800 0.957788 0.9560121 x2000 0.9524666 x4000 0.9510493 x10000 0.9492075}}
+  Squeeze_Y {{curve x100 1 x150 0.994618 0.9916129 0.9898755 0.9876465 0.987607 0.9874462 x500 0.9867617 0.986225 x800 0.9857421 0.9848815 x2000 0.9840647 x4000 0.9834488 x10000 0.9834267}}
+  name LD_3DE4_65mm_1
+  xpos 600
+  ypos -315
+ }
+ Switch {
+  inputs 2
+  which {{parent.preferences.label_und_dis}}
+  name Undistort_Distort4
+  xpos 697
+  ypos -238
+ }
+push $N3c97dc00
+ LD_3DE4_Anamorphic_Standard_Degree_4 {
+  direction distort
+  mode STMap
+  tde4_focal_length_cm 3
+  tde4_custom_focus_distance_cm {{curve x100 100 x10000 10000}}
+  tde4_filmback_width_cm 3.1104
+  tde4_filmback_height_cm 1.1664
+  Cx02_Degree_2 {{curve x100 0.0629545 x150 0.0591695 0.0609882 0.0615405 0.0566499 0.0587735 0.0579373 x500 0.0586821 0.0562404 x800 0.0565115 0.0562955 x2000 0.0575688 x4000 0.0575011 x10000 0.0582335}}
+  Cy02_Degree_2 {{curve x100 0.0534672 x150 0.0505254 0.0566636 0.0516787 0.0518499 0.0494962 0.0487454 x500 0.0509152 0.0497078 x800 0.0506971 0.047015 x2000 0.0484602 x4000 0.0474737 x10000 0.049141}}
+  Cx22_Degree_2 {{curve x100 0.0009176 x150 0.0013189 -0.0025035 -0.0031317 0.0004778 -0.0017324 -0.0010097 x500 -0.0019602 -0.000588 x800 -0.0007355 -0.0006207 x2000 -0.0019154 x4000 -0.0020658 x10000 -0.0030184}}
+  Cy22_Degree_2 {{curve x100 0.0293687 x150 0.0275086 0.0194425 0.0210225 0.0221017 0.0227224 0.0230558 x500 0.0198512 0.0235358 x800 0.0201997 0.023003 x2000 0.0212764 x4000 0.0215698 x10000 0.0215574}}
+  Cx04_Degree_4 {{curve x100 0.0141916 x150 0.0126938 -0.0165162 -0.0191473 0.0087917 -0.01299 -0.0048875 x500 -0.0115318 -0.006529 x800 -0.0132089 -0.0145761 x2000 -0.0183939 x4000 -0.0217599 x10000 -0.0249766}}
+  Cy04_Degree_4 {{curve x100 0.0100596 x150 0.025287 -0.0010012 -0.0006083 0.0193422 0.016738 0.0239522 x500 0.0118956 0.0128439 x800 0.0118534 0.0303596 x2000 0.019946 x4000 0.0186243 x10000 0.0165627}}
+  Cx24_Degree_4 {{curve x100 -0.0086185 x150 -0.0072406 0.0318479 0.0339437 -0.0028735 0.026091 0.014758 x500 0.0232728 0.017533 x800 0.026191 0.0280111 x2000 0.03211 x4000 0.0366681 x10000 0.0408321}}
+  Cy24_Degree_4 {{curve x100 -8.77e-05 x150 -0.0220842 0.0114666 0.015088 -0.0151757 -0.0097804 -0.0198365 x500 -0.0030874 -0.0085614 x800 -0.0045672 -0.0284138 x2000 -0.015051 x4000 -0.0128706 x10000 -0.0127521}}
+  Cx44_Degree_4 {{curve x100 0.0033728 x150 0.0025869 -0.0073474 -0.0077084 0.0018183 -0.0057638 -0.0027951 x500 -0.0049148 -0.0036474 x800 -0.0063355 -0.0068953 x2000 -0.0076242 x4000 -0.0089263 x10000 -0.0098076}}
+  Cy44_Degree_4 {{curve x100 -0.0043879 x150 0.0029245 -0.0035463 -0.0072878 0.0014646 -0.0005255 0.0025098 x500 -0.0020352 -0.0015668 x800 -0.0014602 0.0041477 x2000 0.0008927 x4000 -4.92e-05 x10000 -0.0002078}}
+  Lens_Rotation {{curve x100 -0.840079 x150 -0.840079 -0.840079 -0.840079 -0.840079 -0.840079 -0.840079 x500 -0.840079 -0.840079 x800 -0.840079 -0.840079 x2000 -0.840079 x4000 -0.840079 x10000 -0.840079}}
+  Squeeze_X {{curve x100 0.9985835 x150 0.9765587 0.9655798 0.9591683 0.955069 0.9518715 0.9495127 x500 0.9463831 0.9444201 x800 0.9415893 0.9400786 x2000 0.9367119 x4000 0.9349968 x10000 0.9335126}}
+  Squeeze_Y {{curve x100 1 x150 0.9961641 0.9936951 0.993101 0.9919858 0.9916893 0.9912911 x500 0.9906237 0.9903811 x800 0.9896087 0.989566 x2000 0.988879 x4000 0.9887373 x10000 0.9882196}}
+  name LD_3DE4_55mm_12
+  xpos 425
+  ypos -313
+ }
+push $N3c97d800
+ LD_3DE4_Anamorphic_Standard_Degree_4 {
+  mode STMap
+  tde4_focal_length_cm 3
+  tde4_custom_focus_distance_cm {{curve x100 100 x10000 10000}}
+  tde4_filmback_width_cm 3.1104
+  tde4_filmback_height_cm 1.1664
+  Cx02_Degree_2 {{curve x100 0.0629545 x150 0.0591695 0.0609882 0.0615405 0.0566499 0.0587735 0.0579373 x500 0.0586821 0.0562404 x800 0.0565115 0.0562955 x2000 0.0575688 x4000 0.0575011 x10000 0.0582335}}
+  Cy02_Degree_2 {{curve x100 0.0534672 x150 0.0505254 0.0566636 0.0516787 0.0518499 0.0494962 0.0487454 x500 0.0509152 0.0497078 x800 0.0506971 0.047015 x2000 0.0484602 x4000 0.0474737 x10000 0.049141}}
+  Cx22_Degree_2 {{curve x100 0.0009176 x150 0.0013189 -0.0025035 -0.0031317 0.0004778 -0.0017324 -0.0010097 x500 -0.0019602 -0.000588 x800 -0.0007355 -0.0006207 x2000 -0.0019154 x4000 -0.0020658 x10000 -0.0030184}}
+  Cy22_Degree_2 {{curve x100 0.0293687 x150 0.0275086 0.0194425 0.0210225 0.0221017 0.0227224 0.0230558 x500 0.0198512 0.0235358 x800 0.0201997 0.023003 x2000 0.0212764 x4000 0.0215698 x10000 0.0215574}}
+  Cx04_Degree_4 {{curve x100 0.0141916 x150 0.0126938 -0.0165162 -0.0191473 0.0087917 -0.01299 -0.0048875 x500 -0.0115318 -0.006529 x800 -0.0132089 -0.0145761 x2000 -0.0183939 x4000 -0.0217599 x10000 -0.0249766}}
+  Cy04_Degree_4 {{curve x100 0.0100596 x150 0.025287 -0.0010012 -0.0006083 0.0193422 0.016738 0.0239522 x500 0.0118956 0.0128439 x800 0.0118534 0.0303596 x2000 0.019946 x4000 0.0186243 x10000 0.0165627}}
+  Cx24_Degree_4 {{curve x100 -0.0086185 x150 -0.0072406 0.0318479 0.0339437 -0.0028735 0.026091 0.014758 x500 0.0232728 0.017533 x800 0.026191 0.0280111 x2000 0.03211 x4000 0.0366681 x10000 0.0408321}}
+  Cy24_Degree_4 {{curve x100 -8.77e-05 x150 -0.0220842 0.0114666 0.015088 -0.0151757 -0.0097804 -0.0198365 x500 -0.0030874 -0.0085614 x800 -0.0045672 -0.0284138 x2000 -0.015051 x4000 -0.0128706 x10000 -0.0127521}}
+  Cx44_Degree_4 {{curve x100 0.0033728 x150 0.0025869 -0.0073474 -0.0077084 0.0018183 -0.0057638 -0.0027951 x500 -0.0049148 -0.0036474 x800 -0.0063355 -0.0068953 x2000 -0.0076242 x4000 -0.0089263 x10000 -0.0098076}}
+  Cy44_Degree_4 {{curve x100 -0.0043879 x150 0.0029245 -0.0035463 -0.0072878 0.0014646 -0.0005255 0.0025098 x500 -0.0020352 -0.0015668 x800 -0.0014602 0.0041477 x2000 0.0008927 x4000 -4.92e-05 x10000 -0.0002078}}
+  Lens_Rotation {{curve x100 -0.840079 x150 -0.840079 -0.840079 -0.840079 -0.840079 -0.840079 -0.840079 x500 -0.840079 -0.840079 x800 -0.840079 -0.840079 x2000 -0.840079 x4000 -0.840079 x10000 -0.840079}}
+  Squeeze_X {{curve x100 0.9985835 x150 0.9765587 0.9655798 0.9591683 0.955069 0.9518715 0.9495127 x500 0.9463831 0.9444201 x800 0.9415893 0.9400786 x2000 0.9367119 x4000 0.9349968 x10000 0.9335126}}
+  Squeeze_Y {{curve x100 1 x150 0.9961641 0.9936951 0.993101 0.9919858 0.9916893 0.9912911 x500 0.9906237 0.9903811 x800 0.9896087 0.989566 x2000 0.988879 x4000 0.9887373 x10000 0.9882196}}
+  name LD_3DE4_55mm_1
+  xpos 236
+  ypos -315
+ }
+ Switch {
+  inputs 2
+  which {{parent.preferences.label_und_dis}}
+  name Undistort_Distort3
+  xpos 333
+  ypos -238
+ }
+push $N3c97d400
+ LD_3DE4_Anamorphic_Standard_Degree_4 {
+  direction distort
+  mode STMap
+  tde4_focal_length_cm 4.5
+  tde4_custom_focus_distance_cm {{curve x100 100 x10000 10000}}
+  tde4_filmback_width_cm 4.752
+  tde4_filmback_height_cm 1.782
+  Cx02_Degree_2 {{curve x100 0.157325 x150 0.0990614 0.0885968 0.0848937 0.0816395 0.0785145 0.0761093 x500 0.0756526 0.0753288 x800 0.0680142 0.0685915 x2000 0.0665219 x4000 0.0672115 x10000 0.0668225}}
+  Cy02_Degree_2 {{curve x100 0.0486519 x150 0.0955877 0.0981808 0.0918447 0.088207 0.0851335 0.0829913 x500 0.0840742 0.0850189 x800 0.085647 0.0827492 x2000 0.0781562 x4000 0.0813099 x10000 0.0823106}}
+  Cx22_Degree_2 {{curve x100 -0.0610689 x150 -0.0110012 -0.003176 -0.0010362 0.0016773 0.0044584 0.0065992 x500 0.0068875 0.0036969 x800 0.0100058 0.0112993 x2000 0.010273 x4000 0.0104586 x10000 0.010306}}
+  Cy22_Degree_2 {{curve x100 0.0604094 x150 0.0198044 0.0133943 0.0187701 0.0207239 0.0220058 0.0228051 x500 0.0218748 0.0185653 x800 0.0178042 0.0207673 x2000 0.0243567 x4000 0.0191664 x10000 0.0179416}}
+  Cx04_Degree_4 {{curve x100 -0.1428935 x150 0.0410318 0.0392617 0.0276943 0.0278628 0.030158 0.0312744 x500 0.0248193 0.0069423 x800 0.0297026 0.0239711 x2000 0.0128008 x4000 0.0076022 x10000 0.0122812}}
+  Cy04_Degree_4 {{curve x100 0.2171076 x150 0.029597 0.0075778 0.034332 0.0449803 0.0523968 0.0564238 x500 0.0457301 0.0357244 x800 0.0334609 0.0495802 x2000 0.0659696 x4000 0.0393052 x10000 0.0360449}}
+  Cx24_Degree_4 {{curve x100 0.2042884 x150 -0.037014 -0.0329804 -0.0166356 -0.0168394 -0.0200528 -0.0217732 x500 -0.0140005 0.0155902 x800 -0.0141734 -0.0096957 x2000 0.0096956 x4000 0.0152871 x10000 0.0087367}}
+  Cy24_Degree_4 {{curve x100 -0.2449279 x150 -0.0150638 0.0138549 -0.0253009 -0.0393635 -0.0484607 -0.0533913 x500 -0.0408689 -0.0245978 x800 -0.0228717 -0.0462858 x2000 -0.0683326 x4000 -0.0296534 x10000 -0.0256253}}
+  Cx44_Degree_4 {{curve x100 -0.0433455 x150 0.0146822 0.0118155 0.0066145 0.0060624 0.0063656 0.0064061 x500 0.0042969 -0.0030735 x800 0.0040081 0.0020581 x2000 -0.00293 x4000 -0.004532 x10000 -0.002432}}
+  Cy44_Degree_4 {{curve x100 0.0513868 x150 -0.0067226 -0.0125104 -0.000551 0.0037743 0.0065857 0.0080778 x500 0.003935 0.0005483 x800 0.0007986 0.007316 x2000 0.0137791 x4000 0.0028163 x10000 0.0021373}}
+  Lens_Rotation {{curve x100 -8.6882393 x150 -8.6882393 -8.6882393 -8.6882393 -8.6882393 -8.6882393 -8.6882393 x500 -8.6882393 -8.6882393 x800 -8.6882393 -8.6882393 x2000 -8.6882393 x4000 -8.6882393 x10000 -8.6882393}}
+  Squeeze_X {{curve x100 0.9901149 x150 0.9741215 0.9653093 0.9600303 0.9570509 0.9545231 0.9523227 x500 0.9496391 0.9479556 x800 0.9462119 0.9446451 x2000 0.9424372 x4000 0.9408193 x10000 0.9396283}}
+  Squeeze_Y {{curve x100 1 x150 0.9914973 0.9890486 0.9880724 0.9876119 0.9872488 0.9868989 x500 0.9862152 0.9857168 x800 0.9850804 0.9849125 x2000 0.9845077 x4000 0.9842304 x10000 0.9838928}}
+  name LD_3DE4_45mm_12
+  xpos 61
+  ypos -314
+ }
+push $N3c97d000
+ LD_3DE4_Anamorphic_Standard_Degree_4 {
+  mode STMap
+  tde4_focal_length_cm 4.5
+  tde4_custom_focus_distance_cm {{curve x100 100 x10000 10000}}
+  tde4_filmback_width_cm 4.752
+  tde4_filmback_height_cm 1.782
+  Cx02_Degree_2 {{curve x100 0.157325 x150 0.0990614 0.0885968 0.0848937 0.0816395 0.0785145 0.0761093 x500 0.0756526 0.0753288 x800 0.0680142 0.0685915 x2000 0.0665219 x4000 0.0672115 x10000 0.0668225}}
+  Cy02_Degree_2 {{curve x100 0.0486519 x150 0.0955877 0.0981808 0.0918447 0.088207 0.0851335 0.0829913 x500 0.0840742 0.0850189 x800 0.085647 0.0827492 x2000 0.0781562 x4000 0.0813099 x10000 0.0823106}}
+  Cx22_Degree_2 {{curve x100 -0.0610689 x150 -0.0110012 -0.003176 -0.0010362 0.0016773 0.0044584 0.0065992 x500 0.0068875 0.0036969 x800 0.0100058 0.0112993 x2000 0.010273 x4000 0.0104586 x10000 0.010306}}
+  Cy22_Degree_2 {{curve x100 0.0604094 x150 0.0198044 0.0133943 0.0187701 0.0207239 0.0220058 0.0228051 x500 0.0218748 0.0185653 x800 0.0178042 0.0207673 x2000 0.0243567 x4000 0.0191664 x10000 0.0179416}}
+  Cx04_Degree_4 {{curve x100 -0.1428935 x150 0.0410318 0.0392617 0.0276943 0.0278628 0.030158 0.0312744 x500 0.0248193 0.0069423 x800 0.0297026 0.0239711 x2000 0.0128008 x4000 0.0076022 x10000 0.0122812}}
+  Cy04_Degree_4 {{curve x100 0.2171076 x150 0.029597 0.0075778 0.034332 0.0449803 0.0523968 0.0564238 x500 0.0457301 0.0357244 x800 0.0334609 0.0495802 x2000 0.0659696 x4000 0.0393052 x10000 0.0360449}}
+  Cx24_Degree_4 {{curve x100 0.2042884 x150 -0.037014 -0.0329804 -0.0166356 -0.0168394 -0.0200528 -0.0217732 x500 -0.0140005 0.0155902 x800 -0.0141734 -0.0096957 x2000 0.0096956 x4000 0.0152871 x10000 0.0087367}}
+  Cy24_Degree_4 {{curve x100 -0.2449279 x150 -0.0150638 0.0138549 -0.0253009 -0.0393635 -0.0484607 -0.0533913 x500 -0.0408689 -0.0245978 x800 -0.0228717 -0.0462858 x2000 -0.0683326 x4000 -0.0296534 x10000 -0.0256253}}
+  Cx44_Degree_4 {{curve x100 -0.0433455 x150 0.0146822 0.0118155 0.0066145 0.0060624 0.0063656 0.0064061 x500 0.0042969 -0.0030735 x800 0.0040081 0.0020581 x2000 -0.00293 x4000 -0.004532 x10000 -0.002432}}
+  Cy44_Degree_4 {{curve x100 0.0513868 x150 -0.0067226 -0.0125104 -0.000551 0.0037743 0.0065857 0.0080778 x500 0.003935 0.0005483 x800 0.0007986 0.007316 x2000 0.0137791 x4000 0.0028163 x10000 0.0021373}}
+  Lens_Rotation {{curve x100 -8.6882393 x150 -8.6882393 -8.6882393 -8.6882393 -8.6882393 -8.6882393 -8.6882393 x500 -8.6882393 -8.6882393 x800 -8.6882393 -8.6882393 x2000 -8.6882393 x4000 -8.6882393 x10000 -8.6882393}}
+  Squeeze_X {{curve x100 0.9901149 x150 0.9741215 0.9653093 0.9600303 0.9570509 0.9545231 0.9523227 x500 0.9496391 0.9479556 x800 0.9462119 0.9446451 x2000 0.9424372 x4000 0.9408193 x10000 0.9396283}}
+  Squeeze_Y {{curve x100 1 x150 0.9914973 0.9890486 0.9880724 0.9876119 0.9872488 0.9868989 x500 0.9862152 0.9857168 x800 0.9850804 0.9849125 x2000 0.9845077 x4000 0.9842304 x10000 0.9838928}}
+  name LD_3DE4_45mm_1
+  xpos -128
+  ypos -316
+ }
+ Switch {
+  inputs 2
+  which {{parent.preferences.label_und_dis}}
+  name Undistort_Distort2
+  xpos -31
+  ypos -238
+ }
+push $N3c97cc00
+ LD_3DE4_Anamorphic_Standard_Degree_4 {
+  direction distort
+  mode STMap
+  tde4_focal_length_cm 3.5
+  tde4_custom_focus_distance_cm {{curve x100 100 x10000 10000}}
+  tde4_filmback_width_cm 4.752
+  tde4_filmback_height_cm 1.782
+  Cx02_Degree_2 {{curve x100 0.1742852 x150 0.1716118 0.1697364 0.1681749 0.1628741 0.1629951 0.1669692 x500 0.162571 0.1607414 x800 0.1635165 0.1619885 x2000 0.1585768 x4000 0.1603909 x10000 0.1524741}}
+  Cy02_Degree_2 {{curve x100 0.130149 x150 0.1146412 0.1286863 0.1311889 0.1031953 0.1193993 0.1217501 x500 0.1049273 0.105083 x800 0.1237133 0.1141655 x2000 0.1053721 x4000 0.1198119 x10000 0.112784}}
+  Cx22_Degree_2 {{curve x100 -0.0559546 x150 -0.0570392 -0.0597193 -0.0545495 -0.0546262 -0.0542911 -0.0582197 x500 -0.0549405 -0.0527805 x800 -0.0518404 -0.0503193 x2000 -0.0530748 x4000 -0.054019 x10000 -0.0435742}}
+  Cy22_Degree_2 {{curve x100 0.0461064 x150 0.0530753 0.0353437 0.0320881 0.0590248 0.0413214 0.0347473 x500 0.0532549 0.0503087 x800 0.0306784 0.0402992 x2000 0.049762 x4000 0.0318749 x10000 0.0419747}}
+  Cx04_Degree_4 {{curve x100 0.0474525 x150 -0.0029303 -0.0361084 -0.0295029 -0.0255654 -0.0318479 -0.0364808 x500 -0.0462595 -0.0317477 x800 -0.0574238 -0.0097303 x2000 -0.049645 x4000 -0.0542468 x10000 -0.0054138}}
+  Cy04_Degree_4 {{curve x100 0.0729145 x150 0.1134591 0.050891 0.0258857 0.171459 0.0873823 0.0550526 x500 0.1506697 0.1225114 x800 0.0447332 0.0826856 x2000 0.1569295 x4000 0.0596303 x10000 0.0912108}}
+  Cx24_Degree_4 {{curve x100 -0.0498804 x150 0.0104668 0.0552612 0.0382241 0.0382066 0.0445914 0.0481465 x500 0.062932 0.0419416 x800 0.071005 0.0034997 x2000 0.0661849 x4000 0.0704276 x10000 0.0008992}}
+  Cy24_Degree_4 {{curve x100 -0.0474214 x150 -0.1122832 -0.0324245 -0.0029838 -0.2021148 -0.0893203 -0.0412329 x500 -0.1752199 -0.1345154 x800 -0.0315177 -0.0830768 x2000 -0.1876069 x4000 -0.0525051 x10000 -0.1004125}}
+  Cx44_Degree_4 {{curve x100 0.0208468 x150 0.0039259 -0.0078549 -0.0046839 -0.0040037 -0.005819 -0.0048593 x500 -0.0106034 -0.0051335 x800 -0.0145069 0.0057175 x2000 -0.0117836 x4000 -0.0125725 x10000 0.0039296}}
+  Cy44_Degree_4 {{curve x100 -0.0022395 x150 0.0166024 -0.0022578 -0.0106603 0.0426686 0.013669 0.0005142 x500 0.0368183 0.0241099 x800 -0.000132 0.0108521 x2000 0.0426427 x4000 0.0065475 x10000 0.0175469}}
+  Lens_Rotation {{curve x100 -3.9528684 x150 -3.9528684 -3.9528684 -3.9528684 -3.9528684 -3.9528684 -3.9528684 x500 -3.9528684 -3.9528684 x800 -3.9528684 -3.9528684 x2000 -3.9528684 x4000 -3.9528684 x10000 -3.9528684}}
+  Squeeze_X {{curve x100 1.0099207 x150 0.9869618 0.9765223 0.9698005 0.9657322 0.9624295 0.9599863 x500 0.9571587 0.9546302 x800 0.9516876 0.9500243 x2000 0.9479546 x4000 0.945998 x10000 0.9446384}}
+  Squeeze_Y {{curve x100 1 x150 0.9947798 0.990445 0.9885975 0.9887696 0.9869265 0.9865944 x500 0.9863575 0.9860808 x800 0.9840631 0.9841974 x2000 0.9834156 x4000 0.9825554 x10000 0.9824539}}
+  name LD_3DE4_35mm
+  xpos -319
+  ypos -316
+ }
+push $N3c97c800
+ LD_3DE4_Anamorphic_Standard_Degree_4 {
+  mode STMap
+  tde4_focal_length_cm 3.5
+  tde4_custom_focus_distance_cm {{curve x100 100 x10000 10000}}
+  tde4_filmback_width_cm 4.752
+  tde4_filmback_height_cm 1.782
+  Cx02_Degree_2 {{curve x100 0.1742852 x150 0.1716118 0.1697364 0.1681749 0.1628741 0.1629951 0.1669692 x500 0.162571 0.1607414 x800 0.1635165 0.1619885 x2000 0.1585768 x4000 0.1603909 x10000 0.1524741}}
+  Cy02_Degree_2 {{curve x100 0.130149 x150 0.1146412 0.1286863 0.1311889 0.1031953 0.1193993 0.1217501 x500 0.1049273 0.105083 x800 0.1237133 0.1141655 x2000 0.1053721 x4000 0.1198119 x10000 0.112784}}
+  Cx22_Degree_2 {{curve x100 -0.0559546 x150 -0.0570392 -0.0597193 -0.0545495 -0.0546262 -0.0542911 -0.0582197 x500 -0.0549405 -0.0527805 x800 -0.0518404 -0.0503193 x2000 -0.0530748 x4000 -0.054019 x10000 -0.0435742}}
+  Cy22_Degree_2 {{curve x100 0.0461064 x150 0.0530753 0.0353437 0.0320881 0.0590248 0.0413214 0.0347473 x500 0.0532549 0.0503087 x800 0.0306784 0.0402992 x2000 0.049762 x4000 0.0318749 x10000 0.0419747}}
+  Cx04_Degree_4 {{curve x100 0.0474525 x150 -0.0029303 -0.0361084 -0.0295029 -0.0255654 -0.0318479 -0.0364808 x500 -0.0462595 -0.0317477 x800 -0.0574238 -0.0097303 x2000 -0.049645 x4000 -0.0542468 x10000 -0.0054138}}
+  Cy04_Degree_4 {{curve x100 0.0729145 x150 0.1134591 0.050891 0.0258857 0.171459 0.0873823 0.0550526 x500 0.1506697 0.1225114 x800 0.0447332 0.0826856 x2000 0.1569295 x4000 0.0596303 x10000 0.0912108}}
+  Cx24_Degree_4 {{curve x100 -0.0498804 x150 0.0104668 0.0552612 0.0382241 0.0382066 0.0445914 0.0481465 x500 0.062932 0.0419416 x800 0.071005 0.0034997 x2000 0.0661849 x4000 0.0704276 x10000 0.0008992}}
+  Cy24_Degree_4 {{curve x100 -0.0474214 x150 -0.1122832 -0.0324245 -0.0029838 -0.2021148 -0.0893203 -0.0412329 x500 -0.1752199 -0.1345154 x800 -0.0315177 -0.0830768 x2000 -0.1876069 x4000 -0.0525051 x10000 -0.1004125}}
+  Cx44_Degree_4 {{curve x100 0.0208468 x150 0.0039259 -0.0078549 -0.0046839 -0.0040037 -0.005819 -0.0048593 x500 -0.0106034 -0.0051335 x800 -0.0145069 0.0057175 x2000 -0.0117836 x4000 -0.0125725 x10000 0.0039296}}
+  Cy44_Degree_4 {{curve x100 -0.0022395 x150 0.0166024 -0.0022578 -0.0106603 0.0426686 0.013669 0.0005142 x500 0.0368183 0.0241099 x800 -0.000132 0.0108521 x2000 0.0426427 x4000 0.0065475 x10000 0.0175469}}
+  Lens_Rotation {{curve x100 -3.9528684 x150 -3.9528684 -3.9528684 -3.9528684 -3.9528684 -3.9528684 -3.9528684 x500 -3.9528684 -3.9528684 x800 -3.9528684 -3.9528684 x2000 -3.9528684 x4000 -3.9528684 x10000 -3.9528684}}
+  Squeeze_X {{curve x100 1.0099207 x150 0.9869618 0.9765223 0.9698005 0.9657322 0.9624295 0.9599863 x500 0.9571587 0.9546302 x800 0.9516876 0.9500243 x2000 0.9479546 x4000 0.945998 x10000 0.9446384}}
+  Squeeze_Y {{curve x100 1 x150 0.9947798 0.990445 0.9885975 0.9887696 0.9869265 0.9865944 x500 0.9863575 0.9860808 x800 0.9840631 0.9841974 x2000 0.9834156 x4000 0.9825554 x10000 0.9824539}}
+  name LD_3DE4_35mm1
+  xpos -493
+  ypos -316
+ }
+ Switch {
+  inputs 2
+  which {{parent.preferences.label_und_dis}}
+  name Undistort_Distort
+  xpos -405
+  ypos -240
+ }
+push $N3c97c400
+ LD_3DE4_Anamorphic_Standard_Degree_4 {
+  direction distort
+  mode STMap
+  tde4_focal_length_cm 2.8
+  tde4_custom_focus_distance_cm {{curve x100 100 x10000 10000}}
+  tde4_filmback_width_cm 4.752
+  tde4_filmback_height_cm 1.782
+  Cx02_Degree_2 {{curve x100 0.2087643 x150 0.2313521 0.2387364 0.2379034 0.235161 0.241195 0.2448011 x500 0.234992 0.2279633 x800 0.2412283 0.2564884 x2000 0.2494399 x4000 0.2512411 x10000 0.24912}}
+  Cy02_Degree_2 {{curve x100 0.1692288 x150 0.1905609 0.183704 0.1765094 0.1819225 0.1830858 0.1807108 x500 0.1851221 0.182939 x800 0.1839992 0.1568117 x2000 0.1850242 x4000 0.1885132 x10000 0.1930532}}
+  Cx22_Degree_2 {{curve x100 -0.0327078 x150 -0.0332432 -0.0291374 -0.0242139 -0.0173711 -0.017803 -0.0203443 x500 -0.008353 -0.0004916 x800 -0.0090918 -0.0203428 x2000 -0.011177 x4000 -0.0110313 x10000 -0.0078924}}
+  Cy22_Degree_2 {{curve x100 0.1073901 x150 0.1020688 0.1177781 0.1281543 0.1281518 0.1270051 0.1306057 x500 0.1286497 0.1331323 x800 0.1313672 0.1611286 x2000 0.1345258 x4000 0.1330509 x10000 0.1288241}}
+  Cx04_Degree_4 {{curve x100 -0.0162796 x150 -0.098766 -0.1121004 -0.0918169 -0.0691228 -0.0820951 -0.1032337 x500 -0.0286206 0.014423 x800 -0.0661758 -0.1491398 x2000 -0.0917194 x4000 -0.0945779 x10000 -0.0810558}}
+  Cy04_Degree_4 {{curve x100 0.0440434 x150 -0.0205278 0.0580991 0.1057792 0.0944834 0.0828871 0.1046674 x500 0.0911413 0.1145401 x800 0.0759586 0.2585904 x2000 0.099315 x4000 0.0916038 x10000 0.0693156}}
+  Cx24_Degree_4 {{curve x100 -0.0822044 x150 0.0152946 0.027165 0.0017506 -0.0279434 -0.0165445 0.0119965 x500 -0.0854174 -0.1402923 x800 -0.036794 0.0682478 x2000 -0.0070174 x4000 -0.0036425 x10000 -0.0207045}}
+  Cy24_Degree_4 {{curve x100 -0.0548873 x150 0.0307832 -0.0750122 -0.1341121 -0.121996 -0.1013572 -0.1303577 x500 -0.1099092 -0.1410543 x800 -0.0853576 -0.331461 x2000 -0.1156566 x4000 -0.1063103 x10000 -0.0748056}}
+  Cx44_Degree_4 {{curve x100 0.0242808 x150 -0.0006936 -0.0043146 0.0028624 0.0087959 0.0068128 0.0001137 x500 0.0243953 0.0370279 x800 0.0108284 -0.0142949 x2000 0.0044502 x4000 0.0038718 x10000 0.0080689}}
+  Cy44_Degree_4 {{curve x100 -0.0026933 x150 -0.0214432 0.0070007 0.0216417 0.0182023 0.0132528 0.0219885 x500 0.0167847 0.0247399 x800 0.0062624 0.0717938 x2000 0.017033 x4000 0.0161419 x10000 0.0086244}}
+  Lens_Rotation 0.9672439
+  Squeeze_X {{curve x100 0.9381292 x150 0.9545233 0.9628021 0.9685661 0.972657 0.9747328 0.9761475 x500 0.9796836 0.9816635 x800 0.9830384 0.9836327 x2000 0.9866526 x4000 0.9882834 x10000 0.989755}}
+  Squeeze_Y {{curve x100 0.986163 x150 0.9900995 0.9926885 0.9947107 0.9955681 0.996337 0.9967802 x500 0.9973604 0.9975562 x800 0.9987236 1 x2000 0.9993356 x4000 0.999808 x10000 0.9999783}}
+  name LD_3DE4_28mm_1
+  xpos -685
+  ypos -314
+ }
+push $N3c97c000
+ LD_3DE4_Anamorphic_Standard_Degree_4 {
+  mode STMap
+  tde4_focal_length_cm 2.8
+  tde4_custom_focus_distance_cm {{curve x100 100 x10000 10000}}
+  tde4_filmback_width_cm 4.752
+  tde4_filmback_height_cm 1.782
+  Cx02_Degree_2 {{curve x100 0.2087643 x150 0.2313521 0.2387364 0.2379034 0.235161 0.241195 0.2448011 x500 0.234992 0.2279633 x800 0.2412283 0.2564884 x2000 0.2494399 x4000 0.2512411 x10000 0.24912}}
+  Cy02_Degree_2 {{curve x100 0.1692288 x150 0.1905609 0.183704 0.1765094 0.1819225 0.1830858 0.1807108 x500 0.1851221 0.182939 x800 0.1839992 0.1568117 x2000 0.1850242 x4000 0.1885132 x10000 0.1930532}}
+  Cx22_Degree_2 {{curve x100 -0.0327078 x150 -0.0332432 -0.0291374 -0.0242139 -0.0173711 -0.017803 -0.0203443 x500 -0.008353 -0.0004916 x800 -0.0090918 -0.0203428 x2000 -0.011177 x4000 -0.0110313 x10000 -0.0078924}}
+  Cy22_Degree_2 {{curve x100 0.1073901 x150 0.1020688 0.1177781 0.1281543 0.1281518 0.1270051 0.1306057 x500 0.1286497 0.1331323 x800 0.1313672 0.1611286 x2000 0.1345258 x4000 0.1330509 x10000 0.1288241}}
+  Cx04_Degree_4 {{curve x100 -0.0162796 x150 -0.098766 -0.1121004 -0.0918169 -0.0691228 -0.0820951 -0.1032337 x500 -0.0286206 0.014423 x800 -0.0661758 -0.1491398 x2000 -0.0917194 x4000 -0.0945779 x10000 -0.0810558}}
+  Cy04_Degree_4 {{curve x100 0.0440434 x150 -0.0205278 0.0580991 0.1057792 0.0944834 0.0828871 0.1046674 x500 0.0911413 0.1145401 x800 0.0759586 0.2585904 x2000 0.099315 x4000 0.0916038 x10000 0.0693156}}
+  Cx24_Degree_4 {{curve x100 -0.0822044 x150 0.0152946 0.027165 0.0017506 -0.0279434 -0.0165445 0.0119965 x500 -0.0854174 -0.1402923 x800 -0.036794 0.0682478 x2000 -0.0070174 x4000 -0.0036425 x10000 -0.0207045}}
+  Cy24_Degree_4 {{curve x100 -0.0548873 x150 0.0307832 -0.0750122 -0.1341121 -0.121996 -0.1013572 -0.1303577 x500 -0.1099092 -0.1410543 x800 -0.0853576 -0.331461 x2000 -0.1156566 x4000 -0.1063103 x10000 -0.0748056}}
+  Cx44_Degree_4 {{curve x100 0.0242808 x150 -0.0006936 -0.0043146 0.0028624 0.0087959 0.0068128 0.0001137 x500 0.0243953 0.0370279 x800 0.0108284 -0.0142949 x2000 0.0044502 x4000 0.0038718 x10000 0.0080689}}
+  Cy44_Degree_4 {{curve x100 -0.0026933 x150 -0.0214432 0.0070007 0.0216417 0.0182023 0.0132528 0.0219885 x500 0.0167847 0.0247399 x800 0.0062624 0.0717938 x2000 0.017033 x4000 0.0161419 x10000 0.0086244}}
+  Lens_Rotation 0.9672439
+  Squeeze_X {{curve x100 0.9381292 x150 0.9545233 0.9628021 0.9685661 0.972657 0.9747328 0.9761475 x500 0.9796836 0.9816635 x800 0.9830384 0.9836327 x2000 0.9866526 x4000 0.9882834 x10000 0.989755}}
+  Squeeze_Y {{curve x100 0.986163 x150 0.9900995 0.9926885 0.9947107 0.9955681 0.996337 0.9967802 x500 0.9973604 0.9975562 x800 0.9987236 1 x2000 0.9993356 x4000 0.999808 x10000 0.9999783}}
+  name LD_3DE4_28mm_2
+  xpos -862
+  ypos -312
+ }
+ Switch {
+  inputs 2
+  which {{parent.preferences.label_und_dis}}
+  name Undistort_Distort1
+  xpos -771
+  ypos -239
+ }
+ Switch {
+  inputs 7
+  which {{parent.preferences.label_lenseswitch}}
+  name LesesSwitch2
+  xpos -587
+  ypos -195
+ }
+ FrameHold {
+  firstFrame {{parent.preferences.label_focus*100}}
+  name Focus
+  xpos -587
+  ypos -157
+ }
+push $N3bcdfc00
+ STMap {
+  inputs 2
+  uv rgb
+  name STMap
+  xpos -1102
+  ypos -157
+ }
+set N5a62f000 [stack 0]
+ ShuffleCopy {
+  inputs 2
+  in forward
+  red red
+  green green
+  out forward
+  name ShuffleCopy8
+  xpos -1102
+  ypos -71
+ }
+ VectorBlur2 {
+  inputs 1+1
+  uv forward
+  scale 2.5
+  motion_falloff 0.3
+  soft_lines true
+  invert_mask true
+  name VectorBlur
+  xpos -1102
+  ypos -45
+ }
+ Group {
+  name Vignette
+  tile_color 0x7c7a51ff
+  xpos -1102
+  ypos 3
+  addUserKnob {20 User l Properties}
+  addUserKnob {41 amount l Amount T Input1.amount}
+  addUserKnob {26 ""}
+  addUserKnob {41 Core T Input1.Core}
+  addUserKnob {41 Border T Input1.Border}
+  addUserKnob {41 Softness T Input1.Softness}
+  addUserKnob {26 ""}
+  addUserKnob {41 to0 l "Mask output" T Copy1.to0}
+  addUserKnob {41 output l Output T Input1.output}
+ }
+  Input {
+   inputs 0
+   name Input1
+   xpos 418
+   ypos -376
+   addUserKnob {20 User}
+   addUserKnob {7 Softness}
+   addUserKnob {7 amount}
+   amount 0.2
+   addUserKnob {4 output M {result mask}}
+   addUserKnob {7 Core}
+   Core 0.12
+   addUserKnob {7 Border}
+   Border 0.865
+  }
+  Dot {
+   name Dot5
+   xpos 446
+   ypos -288
+  }
+set N4d1c8400 [stack 0]
+  Radial {
+   replace true
+   area {{-width*(1-Input1.Border)} {area.x} {width-area.x} {height-area.y}}
+   name Radial3
+   xpos 540
+   ypos -261
+  }
+set N4d1c8800 [stack 0]
+  Keyer {
+   input alpha
+   operation "luminance key"
+   range {0 {0.2*(1-Input1.Core)} 1 1}
+   name Keyer1
+   xpos 540
+   ypos -226
+  }
+  Blur {
+   size {{max(width,height)/3*Input1.Softness i}}
+   name Blur1
+   xpos 540
+   ypos -190
+  }
+  Shuffle {
+   red alpha
+   green alpha
+   blue alpha
+   name Shuffle1
+   xpos 540
+   ypos -154
+  }
+set N4d1c9400 [stack 0]
+  Dot {
+   name Dot1
+   xpos 568
+   ypos -46
+  }
+push $N4d1c9400
+push $N4d1c9400
+push $N4d1c8400
+  Grade {
+   inputs 1+1
+   white {{1-parent.Input1.amount}}
+   gamma {{white*1.1}}
+   invert_mask true
+   name Grade12
+   xpos 418
+   ypos -154
+  }
+  Switch {
+   inputs 2
+   which {{Input1.output}}
+   name Switch1
+   xpos 418
+   ypos -95
+  }
+  Copy {
+   inputs 2
+   from0 rgba.alpha
+   name Copy1
+   xpos 418
+   ypos -49
+  }
+  Output {
+   name Output1
+   xpos 418
+   ypos 32
+  }
+push $N4d1c8800
+  Viewer {
+   frame_range 10-10000
+   name Viewer1
+   xpos 691
+   ypos -216
+  }
+ end_group
+push $N5a62f000
+ Dot {
+  name Dot14
+  xpos -986
+  ypos -76
+ }
+ Dot {
+  name Dot17
+  xpos -986
+  ypos 46
+ }
+ Switch {
+  inputs 2
+  which {{parent.preferences.label_und_dis}}
+  name Switch_Blur
+  xpos -1102
+  ypos 48
+  disable {{parent.preferences.label_disable}}
+ }
+ Output {
+  name Output1
+  xpos -1102
+  ypos 92
+ }
+ NoOp {
+  inputs 0
+  name preferences
+  xpos -1186
+  ypos -239
+  hide_input true
+  addUserKnob {20 User}
+  addUserKnob {7 label_lenseswitch l 28mm-35mm}
+  label_lenseswitch {{parent.preferences_label_lenseswitch}}
+  addUserKnob {7 label_focus l "Focus (meter)" R 1 100}
+  label_focus {{parent.preferences_label_focus}}
+  addUserKnob {7 label_und_dis l Undistort-Distort}
+  label_und_dis {{parent.preferences_label_und_dis}}
+  addUserKnob {7 label_chr_aber l Chr_Aber}
+  label_chr_aber {{parent.preferences_label_chr_aber}}
+  addUserKnob {6 label_disable l Disable +STARTLINE}
+  label_disable {{parent.preferences_label_disable}}
+ }
+end_group
