@@ -68,6 +68,7 @@ Animate the Focus parameter (in meters) to reproduce natural lens breathing.
 ## Background
 
 Originally developed during the production of T-34, this tool was later used across feature films, television series, and commercial projects - including an award-winning campaign recognized with Cannes Lions Gold, LIA Gold, and a Clio Award.
+
 **T-34 VFX Breakdown** - the project this gizmo was originally built for. The film was shot on HAWK anamorphic lenses. All CG shots, especially full CG, had to be consistent with that - to look as if they were captured through the same glass: [Watch on Vimeo](https://vimeo.com/519778121)
 
 ## Credits
